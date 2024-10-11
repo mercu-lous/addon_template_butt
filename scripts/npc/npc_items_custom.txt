@@ -1,0 +1,885 @@
+"DOTAAbilities"
+{
+	"item_aghanims_shard"
+	{
+		"ItemPermanent"					"0"
+		"ItemStockTime"					"-1"			  
+		"ItemStockInitial"				"1"
+		"ItemStockMax"					"69"
+		"ItemInitialStockTime"			"0"
+		"ItemInitialStockTimeTurbo"		"0"
+	}
+	
+	"item_black_king_bar"
+	{
+		"ItemAliases"					"bkb;black king bar,ass,bad item,trash,garbage,shit,piss,awful,horrible,no good,very bad, bad, not good, dogshit,penis hole, anti-thicc,hatred, hate this, fucking awful, fuck this item"
+		
+		"AbilityValues"
+		{
+			"magic_resist"			"100"
+		}
+	}
+	//=================================================================================================================
+	// Rapier
+	//=================================================================================================================
+	"item_rapier"
+	{		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_spell_amp"		"42"
+			"bonus_damage"			"666"
+			"bonus_damage_base"		"00"
+		}
+	}
+	
+		"item_tome_of_knowledge"
+	{
+		"ItemCost"						"500"
+		"ItemPurchasable"				"1"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"5"
+		"ItemStockInitial"				"0"
+		"ItemStockTime"					"20"			  
+		"ItemInitialStockTime"			"180"  
+		"IsObsolete"					"0"
+
+
+		"AbilityValues"
+		{
+				"xp_bonus"				"700"
+				"xp_per_use"			"75"
+		}
+	}
+	"item_ultimate_orb"
+	{
+		"ItemStackable"					"1"
+		"ItemStackableMax"				"8"
+	}
+	"item_platemail"
+	{
+		"SecretShop"					"0"
+	}
+	"item_ultimate_orb"
+	{
+		"SecretShop"					"0"
+	}
+	"item_talisman_of_evasion"
+	{
+		"SecretShop"					"0"
+	}
+	"item_demon_edge"
+	{
+		"SecretShop"					"0"
+	}
+	"item_eagle"
+	{
+		"SecretShop"					"0"
+	}
+	"item_reaver"
+	{
+		"SecretShop"					"0"
+	}
+	"item_relic"
+	{
+		"SecretShop"					"0"
+	}
+	"item_hyperstone"
+	{
+		"SecretShop"					"0"
+	}
+	"item_ring_of_tarrasque"
+	{
+		"SecretShop"					"0"
+	}
+	"item_tiara_of_selemene"
+	{
+		"SecretShop"					"0"
+	}
+	"item_mystic_staff"
+	{
+		"SecretShop"					"0"
+	}
+	"item_energy_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_point_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_energy_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_vitality_booster"
+	{
+		"SecretShop"					"0"
+	}
+	"item_cornucopia"
+	{
+		"SecretShop"					"0"	
+	}
+	"item_philosophers_stone"
+	{
+		"ItemCost"						"10"
+		"ItemIsNeutralDrop"				"0"
+		"DisplayOverheadAlertOnReceived" "0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"1"
+		"ItemAliases"					"Fun, Merc, Item, stats"
+
+		"AbilityValues"
+		{
+				"bonus_gpm"			"3000"
+				"bonus_mana"		"0"
+				"bonus_damage"		"0"
+				"gold_on_expire"		"250"
+		}
+	}
+
+	"item_recipe_merc_fun"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"8205"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			""
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25"	
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_fun"
+		"ItemRequirements"
+		{
+			"01"						"item_slippers;item_circlet;item_mantle;item_gauntlets"
+		}
+	}
+
+	"item_merc_fun"
+{
+	"ID"							"8206"
+	"BaseClass"						"item_datadriven"
+	"AbilityTextureName"			"item_claymore"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"ItemCost"						"600"
+	"ItemShopTags"					"Fun, Merc, Item, stats"
+	"ItemQuality"					"rare"
+	"ItemAliases"					"Fun, Merc, Item, stats"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemDisassembleRule" 			"DOTA_ITEM_DISASSEMBLE_NEVER"
+
+	"Modifiers"
+	{
+		"modifier_custom_item_health_bonus"
+		{
+			"Passive" "1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "5"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "5"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "5"
+				"MODIFIER_PROPERTY_RESPAWNTIME" "-10"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "2"
+				"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE" "5"
+				"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "2"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "10"
+				"MODIFIER_PROPERTY_MANA_BONUS" "50"
+				"MODIFIER_PROPERTY_HEALTH_BONUS" "80"
+			}
+
+		}
+	}
+}
+
+	"item_recipe_merc_fun_2"
+	{
+		"ID"							"8207"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_heart"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"9000"	
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_fun_2"
+		"ItemRequirements"
+		{
+			"01"						"item_ultimate_orb;item_reaver;item_eagle;item_mystic_staff"
+		}
+	}
+
+	"item_merc_fun_2"
+{
+	"ID"							"8208"
+	"BaseClass"						"item_datadriven"
+	"AbilityTextureName"			"item_rapier"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"ItemCost"						"20200"
+	"ItemShopTags"					""
+	"ItemQuality"					"rare"
+	"ItemAliases"					"Secret"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemDisassembleRule" 			"DOTA_ITEM_DISASSEMBLE_NEVER"
+
+
+	"Modifiers"
+	{
+		"modifier_custom_item_health_bonus"
+		{
+			"Passive" "1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "90"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "90"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "90"
+				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE" "50"
+				"MODIFIER_PROPERTY_RESPAWNTIME" "-90"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "70"
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "70"
+				"MODIFIER_PROPERTY_STATUS_RESISTANCE_BONUS" "60"
+				"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE" "-20"
+				"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "60"
+			}
+
+		}
+	}
+}
+
+	"item_recipe_armor_tier_1"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"1500"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_armor_tier_1"
+		"ItemRequirements"
+		{
+			"01"						"item_aether_lens"
+		}
+	}
+	"item_armor_tier_1"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 		"item_aether_lens_icon2"
+    "ScriptFile"                    "item_armor_tier_1"
+    "ItemCost"                      "4550"
+	"ItemAliases"					"Fun, Merc, Item, stats"
+ 	"AbilityValues"
+    {
+        "cast_range_bonus" "500"
+        "mana_regen" "4"
+        "mana_bonus" "400"
+    }
+
+	}
+
+		"item_recipe_armor_tier_2"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"2500"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_armor_tier_2"
+		"ItemRequirements"
+		{
+			"01"						"item_armor_tier_1"
+		}
+	}
+	"item_armor_tier_2"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 		"item_aether_lens_icon3"
+    "ScriptFile"                    "item_armor_tier_2"
+    "ItemCost"                      "9100"
+	"ItemAliases"					"Fun, Merc, Item, stats"
+
+ 		"AbilityValues"
+    	{
+        "cast_range_bonus" "1000"
+        "mana_regen" "6"
+        "mana_bonus" "500"
+   	 	}
+
+	}
+
+"item_recipe_merc_Divine_Daedalus" {
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"2500"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_Divine_Daedalus"
+		"ItemRequirements"
+		{
+			"01"						"item_greater_crit;item_rapier"
+		}
+	}
+
+"item_merc_Divine_Daedalus" {
+ 	"BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_divine_daedalus_real"
+    "ScriptFile"                    "item_merc_Divine_Daedalus"
+    "ItemCost"                      "12200"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemStockMax"					"1"
+	"ItemStockTime"					"1200.0"
+	"ItemKillable"					"0"
+	"ItemContributesToNetWorthWhenDropped"	"0"
+	"AllowedInBackpack"				"0"
+	"IsTempestDoubleClonable"		"0"
+	"ItemAliases"					"Fun, Merc, Item, stats, divine, damage"
+	}
+
+
+	"item_merc_high_roller"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_high_roller"
+    "ScriptFile"                    "item_merc_high_roller"
+    "ItemCost"                      "5500"
+	}
+
+	"item_recipe_merc_high_roller"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"1200"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_high_roller"
+		"ItemRequirements"
+		{
+			"01"						"item_relic;item_javelin"
+		}
+	}
+
+	"item_merc_tank_buster"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_tank_buster"
+    "ScriptFile"                    "item_merc_tank_buster"
+    "ItemCost"                      "5500"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+	}
+	"item_recipe_merc_tank_buster"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"750"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_tank_buster"
+		"ItemRequirements"
+		{
+			"01"						"item_mithril_hammer;item_javelin;item_blitz_knuckles"
+		}
+	}
+
+	"item_tier1_token"
+	{
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"1"
+		"ItemCost" "500"
+		"ItemStockInitial"				"5"
+		"ItemStockTime"					"5"			  
+		"ItemInitialStockTime"			"300"  
+		"ItemAliases"					"Fun, Merc, Item, stats"
+	}
+	"item_tier2_token"
+	{
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"1"
+		"ItemCost" "1500"
+		"ItemStockInitial"				"0"
+		"ItemStockTime"					"5"			  
+		"ItemInitialStockTime"			"600"  
+		"ItemAliases"					"Fun, Merc, Item, stats"
+	}
+	"item_tier3_token"
+	{
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"1"
+		"ItemCost" "2500"
+		"ItemStockInitial"				"0"
+		"ItemStockTime"					"5"			  
+		"ItemInitialStockTime"			"900"  
+		"ItemAliases"					"Fun, Merc, Item, stats"
+	}
+	"item_tier4_token"
+	{
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"1"
+		"ItemCost" "3500"
+		"ItemAliases"					"Fun, Merc, Item, stats"
+	}
+	"item_tier5_token"
+	{
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"1"
+		"ItemCost" "5555"
+		"ItemStockInitial"				"0"
+		"ItemStockTime"					"5"			  
+		"ItemInitialStockTime"			"1200"  
+		"ItemAliases"					"Fun, Merc, Item, stats"
+	}
+
+	
+	"item_merc_platinum_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_platinum_branch"
+    "ScriptFile"                    "item_merc_platinum_branch"
+    "ItemCost"                      "600"
+	"ItemAliases"					"Fun, branch, Item, stats,"
+	"AbilityValues"
+    	{
+        "all_stats" "8"
+   	 	}
+	}
+	"item_recipe_platinum_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_platinum_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_gold_branch;item_merc_gold_branch"
+		}
+	}
+	"item_merc_diamond_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_diamond_branch"
+    "ScriptFile"                    "item_merc_diamond_branch"
+    "ItemCost"                      "1200"
+	"ItemAliases"					"Fun, branch, Item, stats,"
+	"AbilityValues"
+    	{
+        "all_stats" "16"
+   	 	}
+	}
+	"item_recipe_diamond_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_diamond_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_platinum_branch;item_merc_platinum_branch"
+		}
+	}
+"item_merc_meteorite_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_meteorite_branch"
+    "ScriptFile"                    "item_merc_meteorite_branch"
+    "ItemCost"                      "2400"
+	"ItemAliases"					"Fun, branch, Item, stats,"
+	"AbilityValues"
+    	{
+        "all_stats" "32"
+   	 	}
+	}
+
+	"item_recipe_meteorite_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_meteorite_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_diamond_branch;item_merc_diamond_branch"
+		}
+	}
+
+	"item_merc_vibranium_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_vibranium_branch"
+    "ScriptFile"                    "item_merc_vibranium_branch"
+    "ItemCost"                      "4800"
+	"ItemAliases"					"Fun, branch, Item, stats,"
+	"AbilityValues"
+    	{
+        "all_stats" "64"
+   	 	}
+	}
+	"item_recipe_vibranium_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_vibranium_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_meteorite_branch;item_merc_meteorite_branch"
+		}
+	}
+
+	"item_merc_gold_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_gold_branch"
+    "ScriptFile"                    "item_merc_gold_branch"
+    "ItemCost"                      "5500"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+	}
+	"item_recipe_merc_gold_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_gold_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_branches;item_branches;item_branches;item_branches;item_branches;item_branches"
+		}
+	}
+	"item_merc_platinum_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_platinum_branch"
+    "ScriptFile"                    "item_merc_platinum_branch"
+    "ItemCost"                      "5500"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+	}
+	"item_recipe_merc_platinum_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_platinum_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_gold_branch;item_merc_gold_branch"
+		}
+	}
+	"item_merc_diamond_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_diamond_branch"
+    "ScriptFile"                    "item_merc_diamond_branch"
+    "ItemCost"                      "5500"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+	}
+	"item_recipe_merc_diamond_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_diamond_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_platinum_branch;item_merc_platinum_branch"
+		}
+	}
+	"item_merc_meteorite_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_meteorite_branch"
+    "ScriptFile"                    "item_merc_meteorite_branch"
+    "ItemCost"                      "5500"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+	}
+	"item_recipe_merc_meteorite_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_meteorite_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_diamond_branch;item_merc_diamond_branch"
+		}
+	}
+	"item_merc_vibranium_branch"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_vibranium_branch"
+    "ScriptFile"                    "item_merc_vibranium_branch"
+    "ItemCost"                      "5500"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+	}
+	"item_recipe_merc_vibranium_branch"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_vibranium_branch"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_meteorite_branch;item_merc_meteorite_branch"
+		}
+	}
+	"item_blink"
+	{
+		"AbilityValues"
+		{
+			"blink_damage_cooldown"	"1.0"
+		}
+	}
+
+	"item_merc_dragon_lance_2"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_dragon_lance_2"
+    "ScriptFile"                    "item_merc_dragon_lance_2"
+    "ItemCost"                      "2900"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+
+	"AbilityValues" {
+		"bonus_range" "250"
+		"strength" "10"
+		"agility" "15"
+	}
+
+	}
+	"item_recipe_merc_dragon_lance_2"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"1000"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_dragon_lance_2"
+		"ItemRequirements"
+		{
+			"01"						"item_dragon_lance"
+		}
+	}
+		"item_merc_dragon_lance_3"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_dragon_lance_3"
+    "ScriptFile"                    "item_merc_dragon_lance_3"
+    "ItemCost"                      "3900"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+
+	
+	"AbilityValues" {
+		"bonus_range" "350"
+		"strength" "10"
+		"agility" "15"
+	}
+
+	}
+	"item_recipe_merc_dragon_lance_3"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"1000"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_dragon_lance_3"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_dragon_lance_2"
+		}
+	}
+
+	"item_merc_basher_highroller"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_merc_basher_highroller"
+    "ScriptFile"                    "abilities/item_merc_basher_highroller"
+    "ItemCost"                      "3250"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+
+	
+	"AbilityValues" {
+		"bash_damage" "30"
+		"bash_duration" "10"
+		"bash_chance" "2"
+	}
+
+	}
+	"item_recipe_merc_basher_highroller"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"1300"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_basher_highroller"
+		"ItemRequirements"
+		{
+			"01"						"item_mithril_hammer;item_belt_of_strength"
+		}
+	}
+
+	"item_recipe_abyssal_blade"
+	{
+		"ItemRequirements"
+		{
+			"01"						"item_basher;item_vanguard"
+			"02"						"item_merc_basher_highroller;item_vanguard"
+		}
+	}
+
+	"item_merc_fish_slapper"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_fish_slapper"
+    "ScriptFile"                    "abilities/item_merc_fish_slapper"
+    "ItemCost"                      "5675"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+
+	
+	"AbilityValues" {
+		"strike_damage" "100"
+		"strike_chance" "80"
+		"bash_duration" "0.15"
+		"strength" "10"
+	}
+
+	}
+	"item_recipe_merc_fish_slapper"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"1000"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_fish_slapper"
+		"ItemRequirements"
+		{
+			"01"						"item_javelin;item_basher;item_javelin"
+		}
+	}
+
+	"item_recipe_abyssal_blade"
+	{
+		"ItemRequirements"
+		{
+			"01"						"item_basher;item_vanguard"
+			"02"						"item_merc_basher_highroller;item_vanguard"
+		}
+	}
+
+		"item_merc_blade_mail"
+	{
+    "BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName" 			"item_merc_blade_mail"
+    "ScriptFile"                    "abilities/item_merc_blade_mail"
+	"ItemAliases"					"Fun, Merc, Item, stats,"
+	"AbilityCooldown"				"24"
+
+	}
+	"item_recipe_merc_blade_mail"
+	{
+   "BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"2500"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_blade_mail"
+		"ItemRequirements"
+		{
+			"01"						"item_blade_mail"
+		}
+	}
+	
+}

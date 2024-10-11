@@ -1,0 +1,223 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+
+	"npc_dota_hero_meepo" 
+	{
+		"AttackDamageMin"		"12"
+		"AttackDamageMax"		"22"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
+		"AttributeBaseStrength"		"8"
+		"AttributeStrengthGain"		"4.0"
+		"AttributeBaseAgility"		"8"
+		"AttributeAgilityGain"		"4.0"
+		"AttributeBaseIntelligence"		"8"
+		"AttributeIntelligenceGain"		"4.0"
+	}
+	"npc_dota_hero_crystal_maiden" 
+	{
+		"AttributeBaseStrength"		"35"
+		"AttributeStrengthGain"		"14.000000"
+		"AttributeBaseIntelligence"	"75"
+
+	}
+		"npc_dota_hero_snapfire" 
+	{
+		"ArmorPhysical"			"50"
+	}
+		"npc_dota_hero_chaos_knight" 
+	{
+		"AttackDamageMin"		"-125"
+		"AttackDamageMax"		"300"
+
+	}
+	"npc_dota_hero_juggernaut" 
+	{
+		"AttackRate"		"0.66"
+		"BaseAttackSpeed"		"20"
+	}
+	"npc_dota_hero_techies" 
+	{
+		"Ability1"		"techies_land_mines"
+		"Ability2"		"techies_stasis_trap"
+		"Ability3"		"techies_suicide"
+		"Ability9"		"techies_focused_detonate" // WAS ABIL 4
+		"Ability8"		"techies_minefield_sign" //WAS ABIL 5
+		"Ability6"		"techies_remote_mines"
+		"ArmorPhysical"		"5"
+		"AttackDamageMin"		"11"
+		"AttackDamageMax"		"18"
+		"AttackRange"		"725"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"20"
+		"AttributeStrengthGain"		"2.800000"
+		"AttributeBaseIntelligence"		"27"
+		"AttributeIntelligenceGain"		"3.50000"
+		"AttributeAgilityGain"		"1.700000"
+		"StatusManaRegen"	"1.0"
+		"MovementSpeed"		"330"
+	}
+
+	"npc_dota_hero_kunkka" 
+	{
+		"MovementSpeed" 	"335"
+	}
+	"npc_dota_hero_abaddon" 
+	{
+		"MovementSpeed" 	"355"
+	}
+	"npc_dota_hero_wisp" {
+		"MovementTurnRate"		"1000000.000000"
+		"ModelScale"		"0.500000"
+		"AttributeBaseStrength"		"12"
+		"AttributeStrengthGain"		"2.300000"
+	}
+	"npc_dota_hero_clinkz" {
+		"Ability2" "clinkz_skeleton_walk"
+		"Ability9" "clinkz_searing_arrows" //WAS ABILLITY 4
+		"Ability3" "clinkz_death_pact"
+	}
+	"npc_dota_hero_necrolyte" {
+		"ArmorPhysical"			"12"
+	}
+	"npc_dota_hero_pugna" {
+		"Ability7" "merc_magic_resistance_lua"
+	}
+	"npc_dota_hero_drow_ranger" {
+		"AttributeAgilityGain"		"3.696969696"
+		"MovementTurnRate"		"1000000.000000"
+	}
+	"npc_dota_hero_tidehunter" {
+	"Facets"
+		{
+			"tidehunter_kraken_swell"
+			{
+				"Icon"				"armor"
+				"Color"				"Black"
+				"GradientID"		"0"
+			}
+			"tidehunter_sizescale"
+			{
+				"Icon"				"overshadow"
+				"Color"				"Green"
+				"GradientID"		"0"
+
+				"KeyValueOverrides"
+				{
+					"AttributeBaseStrength"		"25"
+					"AttributeStrengthGain"		"4.9"
+				}
+			}
+		}
+		"AttributeStrengthGain"		"5.3"
+		"AttributeIntelligenceGain"		"4"
+		"AttributeAgilityGain"		"4.00000"
+		"Ability8" 		"merc_magic_resistance_lua"
+		"Ability10"		""
+		"Ability11"		""
+		"Ability12"		""
+		"Ability13"		""
+		"Ability14"		""
+		"Ability15"		""
+		"Ability16"		""
+		"Ability17"		""
+	}
+	"npc_dota_hero_phoenix" {
+		"Ability9" "merc_flying" //WAS Abillity 4
+	}
+	"npc_dota_hero_pudge" {
+		"ModelScale"		"2.00000"
+		"AttackDamageMin"		"180"
+		"AttackDamageMax"		"200"
+		"AttackRate"		"3.00000"
+		"MovementSpeed" "230"
+		"AttributeBaseStrength" "32"
+	}
+	"npc_dota_hero_earthshaker" {
+		"Ability2" "earthshaker_echo_slam"
+		"Ability6" "earthshaker_enchant_totem"
+	}
+	"npc_dota_hero_dark_willow" 
+	{
+		"AttackRate"		"1.4"
+	}
+	"npc_dota_hero_witch_doctor" {
+		"ModelScale"		"0.33000"
+		"MovementSpeed" "475"
+		"RingRadius"		"150"
+		"VisionDaytimeRange"		"1200"
+		"VisionNighttimeRange"		"1200"
+	}
+
+	"npc_dota_hero_monkey_king" {
+		"AttackRange"		"550"
+	}
+
+	"npc_dota_hero_medusa" {
+		"AttackRange"		"1025"
+		"AttributeStrengthGain"		"3.5"
+	}
+	"npc_dota_hero_primal_beast" {
+		"MovementSpeed"		"400"
+	}
+	"npc_dota_hero_sniper" {
+		"AttackRange"		"150"
+		"AttributeStrengthGain"		"5.0000"
+		"AttributeIntelligenceGain"		"5.600000"
+		"AttributeAgilityGain"		"5.20000"
+		"MovementSpeed"		"340"
+	}
+	"npc_dota_hero_morphling" {
+		"AttributeStrengthGain"		"5.5"
+		"AttributeAgilityGain"		"5.5"
+	}
+	"npc_dota_hero_luna" {
+		"ProjectileSpeed"		"2000"
+		"Ability10" "special_bonus_unique_luna_8"
+		"Ability14" "special_bonus_unique_luna_7"
+	}
+	"npc_dota_hero_broodmother" {
+		"Ability9" "merc_movespeed_cap_increase"
+	}
+	"npc_dota_hero_bane" {
+		"ability9" "merc_prospecting"
+	}
+	"npc_dota_hero_bristleback" {
+		"ability8" "merc_status_resistance"
+	}
+	"npc_dota_hero_bloodseeker" {
+		"AttackRate"		"1.4"
+		"ability9" "merc_knockback"
+	}
+	"npc_dota_hero_vengefulspirit" {
+		"ability9" "skeleton_king_reincarnation"	
+	}
+	"npc_dota_hero_tinker" {
+		"Ability3" "tinker_heat_seeking_missile"
+	}	
+	"npc_dota_hero_enchantress" {
+		"Ability1"		"merc_impetus"	
+	}
+	"npc_dota_hero_invoker" {
+		"AttributeIntelligenceGain" "10.0"
+	}
+	"npc_dota_hero_tiny" {
+		"Facets"
+		{
+			"tiny_insurmountable" 
+			{
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"tiny_insurmountable"
+					}
+				}
+			}
+		}
+	}
+	
+	
+}
