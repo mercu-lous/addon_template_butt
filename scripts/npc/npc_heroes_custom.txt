@@ -218,6 +218,10 @@
 			}
 		}
 	}
+
+	"npc_dota_hero_spectre" {
+		"Ability8"		"merc_abillity_spectre"
+	}
 	
 	
 }

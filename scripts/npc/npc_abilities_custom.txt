@@ -207,7 +207,7 @@
 	
 		"AbilityCooldown"				"16 12"
 
-		"AbilityManaCost"				"70 90 "
+		"AbilityManaCost"				"70 90"
 	}
 
 	"meepo_poof"
@@ -405,7 +405,7 @@
 	
 	"lich_frost_nova"
 	{
-		"AbilityManaCost"				"55"
+		"AbilityManaCost"				"55 60 65 70"
 
 		"AbilityValues"
 		{	
@@ -421,7 +421,7 @@
 
 		"AbilityCooldown"				"12 11 10 9"
 		
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"75"
 		
 		"AbilityValues" {
 			"destination"		"100 200 300 400"
@@ -441,7 +441,7 @@
 	"lich_frost_shield"
 	{
 		"AbilityCooldown"				"20 15 10 5"
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"70"
 	}
 
 	"lich_chain_frost"
@@ -510,29 +510,20 @@
 		{
 			"path_width"				
 			{
-				"value"						"1200"
+				"value"						"1000"
 				"special_bonus_scepter"			"+150"
 				"affected_by_aoe_increase"	"1"
 			}
 			"duration"
 			{
 				"value"							"15.0"
-				"special_bonus_scepter"			"+15.0"
+				"special_bonus_scepter"			"+10.0"
 			}
 			"AbilityCastRange"				
 			{
-				"value"						"1200"
+				"value"						"1000"
 			}	
 		}	
-	}
-
-		"jakiro_double_trouble"
-	{
-		"AbilityValues"
-		{
-			"second_attack_delay"			".2"
-			"attack_damage_reduction"		"25"
-		}
 	}
 	//=================================================================================================================
 	// Chaos Knight: Chaos Bolt
@@ -657,32 +648,16 @@
 				"value"		"12 25 37 50"
 				"special_bonus_unique_slardar_2"	"+50"
 			}
-			"duration"				".3 .32 .34 .36"
+			"duration"				".32 .34 .36 .38"
 			"attack_count"			"0"
 		}
 	}
-"juggernaut_blade_dance"
-	{
-		"AbilityValues"
-		{
-				"blade_dance_crit_chance"	"25 35 45 55"
-				"blade_dance_crit_mult"		
-				{
-					"value"		"110"
-					"special_bonus_unique_juggernaut_4"	"+5"
-				}
-				"blade_dance_lifesteal"
-				{
-					"value"	"0"
-					"special_bonus_unique_juggernaut_blade_dance_lifesteal"	"+25"
-				}
-		}
-	}
+
 	"juggernaut_blade_fury"
 	{
 		"blade_fury_aspd_multiplier"
 			{
-				"value"		"1.75 1.5 1.25 1"
+				"value"		"1"
 			}
 		"AbilityValues"
 		{
@@ -703,7 +678,7 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"					"25 20 15 10"
+				"value"					"28 23 18 13"
 				"special_bonus_unique_juggernaut_blade_fury_cooldown"		"-4"
 			}
 		}
@@ -721,7 +696,7 @@
 			
 			"hex_duration"				"4.0 3.0 2.0 1.0"
 
-			"damage_reduction_duration"	"0.5 0.8 1.1 1.4"
+			"damage_reduction_duration"	"1.5 1.5 1.5 1.5"
 		}
 	}
 	"shadow_shaman_shackles"
@@ -975,6 +950,27 @@
 				}
 		}
 	}
+	
+	"merc_abillity_spectre" {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities\merc_abillity_spectre.lua"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		"Innate" 						"0"
+		"AbilityTextureName"			"item_soul_ring"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityCooldown" "5"
+
+		"AbilityValues" {
+			"damage_radius" "400"
+			"self_damage" "100"
+			"duration" "10"
+			"ls_start" "200"
+		}
+	}
 
 	"spectre_desolate"
 	{
@@ -1050,13 +1046,13 @@
 
 	"abaddon_death_coil"
 	{
-		"AbilityManaCost"				"25 50 75 100"
+		"AbilityManaCost"				"75 85 95 105"
 
 		"AbilityValues"
 		{
 			"self_damage"			
 			{
-				"value"				"100"
+				"value"				"110"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_PURE"
 			}
 			"missile_speed"			"900"
@@ -1746,7 +1742,7 @@
 	{
 		"AbilityType" "DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel" "3"
-		"AbilityCastPoint"				"0.3 0.2 0.1"
+		"AbilityCastPoint"				"0.0"
 
 
 		"AbilityManaCost"				"110 140 180"
@@ -1755,13 +1751,13 @@
 		{
 			"damage"
 			{
-				"value"									"350 450 550"
-				"special_bonus_facet_pudge_flayers_hook"	"=250 =350 =450"
-				"special_bonus_unique_pudge_7"			"+150"
+				"value"									"150 250 350"
+				"special_bonus_facet_pudge_flayers_hook"	"=75 =150 =250"
+				"special_bonus_unique_pudge_7"			"+100"
 			}
 			"hook_speed"								
 			{
-				"value"						"1700"
+				"value"						"5700"
 				"special_bonus_facet_pudge_flayers_hook"	"+0"
 			}
 			"distance_to_damage"
@@ -1769,16 +1765,16 @@
 				"special_bonus_facet_pudge_flayers_hook" "26 34 42"				
 			}
 
-			"hook_width"								"300"
+			"hook_width"								"20"
 			"AbilityCastRange"								
 			{
-				"value"						"2150 2300 2450"
+				"value"						"1400 1600 1800"
 				"special_bonus_facet_pudge_flayers_hook"	"+15%"
 			}
 			"AbilityCooldown"				
 			{
-				"value"								"20"
-				"special_bonus_unique_pudge_5"		"-10"
+				"value"								"20 16 14"
+				"special_bonus_unique_pudge_5"		"-6"
 			}
 		}
 	}
@@ -3907,7 +3903,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
-		"AbilityCastRange"				"550"
+		"AbilityCastRange"				"550"q	
 		"AbilityCastPoint"				"0"
 
 	
@@ -3917,7 +3913,7 @@
 
 		"AbilityValues"
 		{
-			"bonus_damage"	"60 120 180 240"
+			"bonus_damage"	"100 180 240 300"
 			"distance_cap"			"1750"
 			"bonus_attack_range_scepter"	"190 190 190"
 		}
@@ -3943,7 +3939,7 @@
 			}
 			"freeze_cooldown"
 			{
-				"value"					"0.80 0.77 0.74 0.71 0.68 0.65 0.62 0.27"
+				"value"					"0.80 0.77 0.74 0.71 0.68 0.65 0.27"
 				"levelkey"				"quaslevel"	
 			}
 			"freeze_damage"
@@ -3966,7 +3962,7 @@
 		{
 			"mana_burned"
 			{
-				"value"			"100 175 250 325 400 475 550 1250"
+				"value"			"100 175 250 325 400 475 1250"
 				"levelkey"				"wexlevel"
 				
 			}
@@ -3979,7 +3975,7 @@
 		{
 			"damage"
 			{
-				"value"					"200 250 300 350 400 450 500 1100"
+				"value"					"200 250 300 350 400 450 1100"
 				"levelkey"				"exortlevel"
 			}
 		}
@@ -3991,7 +3987,7 @@
 		{
 			"damage"
 			{
-				"value"					"60 100 140 180 220 260 300 690"
+				"value"					"60 100 140 180 220 260 690"
 				"levelkey"				"exortlevel"
 			}
 			"knockback_duration"

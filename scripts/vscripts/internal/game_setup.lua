@@ -10,7 +10,7 @@ if GameSetup == nil then
       --put your rules here
       GameRules:SetSameHeroSelectionEnabled(true)
       GameRules:SetHeroSelectionTime(180)
-      GameRules:SetStrategyTime(30)
+      GameRules:SetStrategyTime(45)
       GameRules:SetCustomGameSetupAutoLaunchDelay(60)
       -- GameMode:SetDaynightCycleAdvanceRate(1.3)
       GameMode:SetDaynightCycleDisabled(false)
