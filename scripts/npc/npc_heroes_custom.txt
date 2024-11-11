@@ -222,6 +222,46 @@
 	"npc_dota_hero_spectre" {
 		"Ability8"		"merc_abillity_spectre"
 	}
+
+	"npc_dota_hero_skeleton_king" {
+			"ability1" "merc_bash"
+	"Facets"
+		{		
+			"skeleton_king_facet_bone_guard" 
+			{
+				"Icon"				"summons"
+				"Color"				"Yellow"
+				"GradientID"		"0"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"skeleton_king_spectral_blade"
+						"AbilityIndex"	"1"
+						"AutoLevelAbility"	"false"
+					}
+				}
+			}
+
+			"skeleton_king_facet_cursed_blade"
+			{
+				"Icon"				"damage"
+				"Color"				"Red"
+				"GradientID"		"0"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"skeleton_king_spectral_blade"
+						"AbilityIndex"	"1"
+						"AutoLevelAbility"	"false"
+					}
+				}
+			}
+		}
+	}
 	
 	
 }

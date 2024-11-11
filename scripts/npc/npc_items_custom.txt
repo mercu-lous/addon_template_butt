@@ -881,5 +881,21 @@
 			"01"						"item_blade_mail"
 		}
 	}
+
+	"item_blood_grenade"
+	{
+		"AbilityTextureName" 			"item_nutella_grenade"
+		"ItemCost"						"50"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"grenade"
+		"ItemStackable"					"1"
+		"ItemStackableMax"				"100"
+		"ItemStockMax"					"3"
+		"ItemStockInitial"				"10"
+		"ItemStockTime"					"1"
+	}
 	
+	
+
 }

@@ -1308,7 +1308,7 @@
 		{
 			"bash_chance"			"17 17 17 17"		
 			"bash_damage"				"14 20 26 32"
-			"bash_duration"				"0.9 1.2 1.5 1.8"
+			"bash_duration"				"0.5 0.8 1.1 1.4"
 		}
 	}
 
@@ -2171,7 +2171,7 @@
 	}	
 	"wisp_relocate"
 	{
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"22"
 	}
 	"tusk_snowball"
 	{
@@ -2401,7 +2401,13 @@
 	}
 	"legion_commander_duel"
 	{
-		"AbilityValues" {
+		"AbilityValues" 
+		{
+			"reward_damage"			
+			{
+				"value"			"-10 -20 -30"
+				"special_bonus_shard"	"-10"
+			}
 		"AbilityCooldown"	
 			{
 				"value"					"30 25 20"
@@ -3903,7 +3909,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
-		"AbilityCastRange"				"550"q	
+		"AbilityCastRange"				"550"
 		"AbilityCastPoint"				"0"
 
 	
@@ -3934,7 +3940,7 @@
 		{
 			"duration"
 			{
-				"value"					"3.0 3.4 3.8 4.2 4.6 5.0 5.4 5.8 10"
+				"value"					"3.0 3.4 3.8 4.2 4.6 5.0 10"
 				"levelkey"				"quaslevel"	
 			}
 			"freeze_cooldown"
@@ -3944,12 +3950,12 @@
 			}
 			"freeze_damage"
 			{
-				"value"					"8 16 24 32 40 48 56 128"
+				"value"					"24 32 40 48 56 128"
 				"levelkey"				"quaslevel"	
 			}
 			"freeze_heal"
 			{
-				"value"					"13 26 39 52 65 78 91 208"
+				"value"					"26 39 52 65 78 91 208"
 				"levelkey"				"quaslevel"	
 			}
 		}
@@ -3962,7 +3968,7 @@
 		{
 			"mana_burned"
 			{
-				"value"			"100 175 250 325 400 475 1250"
+				"value"			"175 250 325 400 475 1250"
 				"levelkey"				"wexlevel"
 				
 			}
@@ -3992,12 +3998,12 @@
 			}
 			"knockback_duration"
 			{
-				"value"					"0.2 0.4 0.6 0.8 1.0 1.2 1.4 3.2"
+				"value"					"0.4 0.6 0.8 1.0 1.2 1.4 3.2"
 				"levelkey"				"quaslevel"
 			}
 			"disarm_duration"
 			{
-				"value"					"1.25 2.0 2.75 3.5 4.25 5.0 5.75 8"
+				"value"					"2.0 2.75 3.5 4.25 5.0 5.75 8"
 				"levelkey"				"wexlevel"
 			}
 		}
@@ -4028,6 +4034,173 @@
 		}
 	}
 
+	"obsidian_destroyer_ominous_discernment"
+	{
+		"AbilityValues"
+		{
+			"bonus_max_mana_per_int"			
+			{
+				"value"						"20"
+			}
+		}
+	}
+	"kez_switch_weapons"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_INVISIBLE"
+		"Innate" 						"1"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"kez_switch_weapons_sai"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastGestureSlot"		"ATTACK"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0.0"
+
+		"AbilityValues"
+		{			
+			"katana_attack_range"								"225"
+			"katana_base_attack_time"							"2.0"
+			"katana_bonus_damage"								"20"
+			"sai_attack_range"									"150"
+			"sai_base_attack_time"								"1.5"
+			"cooldown_reduction_per_level"						"0.2"
+			"scepter_cooldown_timer"							"3"
+		}
+	}
+
+	"kez_raptor_dance"
+	{
+		"AbilityChannelTime"			"0.2"
+
+		"AbilityValues"
+		{
+			"AbilityCooldown"				
+			{
+				"value"		"10 10 10"
+				"special_bonus_unique_kez_ultimate_cooldown"		"-4"
+			}
+		}
+	}
+	"kez_ravens_veil"
+	{
+		"AbilityValues"
+		{
+			"AbilityCooldown"				
+			{
+				"value"		"10 10 10"
+				"special_bonus_unique_kez_ultimate_cooldown"		"-4"
+			}
+		}
+
+	}
+
+	"huskar_berserkers_blood"
+	{
+		"AbilityValues"
+		{
+			"maximum_attack_speed"			"270 320 470 520"
+			"maximum_health_regen"
+			{
+				"value"						"25 40 55 70"
+				"special_bonus_unique_huskar_6"			"+30"
+			}
+			"maximum_magic_resist"			"20 25 30 35"
+			"hp_threshold_max"				"20"
+		}
+	}
+
+	"huskar_life_break"
+	{
+		"AbilityCooldown"				"8 7 6"
+
+		"AbilityValues"
+		{
+			"cast_range_bonus"		
+			{
+				"value"		"250"
+				"RequiresScepter"		"1"
+			}
+		}
+	}
+
+	"lone_druid_bear_necessities"
+	{
+		"AbilityValues"
+		{	
+			"item_slots"				"1"
+			"bonus_stat_percent"		"100 200 300 400"
+		}
+	}
+
+	"treant_innate_attack_damage"
+	{
+		"AbilityValues"
+		{
+			"attack_damage_per_level"				
+			{ 
+				"value"						"10"
+				"special_bonus_facet_treant_primeval_power"	"+10"
+			}
+		}
+	}
+
+	"treant_leech_seed"
+	{
+		"AbilityValues"
+		{
+				"damage_interval"				"0.33"
+				"leech_damage"					
+				{
+					"value"				"15 30 45 60"
+					"special_bonus_unique_treant_2"			"+45"
+				}		
+				"movement_slow"					
+				{
+					"value"				"-8 -14 -20 -26"
+					"special_bonus_unique_treant_3"			"-18"
+
+				}	
+				"radius"
+				{
+					"value"				"3050"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"						"5.0"
+				"projectile_speed"				"450"
+				"can_target_ground"				
+				{
+					"value"				"0"
+					"special_bonus_facet_treant_sapling"	"=1"
+				}
+				"creep_damage_reduction_pct"			
+				{
+					"value"				"0"
+					"special_bonus_facet_treant_sapling"	"=50"
+				}
+				"creep_heal_reduction_pct"				"50"
+		}
+	}
+
+	"lone_druid_spirit_bear_entangle"
+	{
+		"AbilityCooldown"				"6.0"
+		"AbilityValues"
+		{
+				"damage"				
+				{
+					"value"					"30 40 50 60"
+					"special_bonus_unique_lone_druid_entangle_dps"			"+30"
+				}
+				"entangle_chance"		"100"
+				"hero_entangle_chance"		"100"
+		}
+	}
+
+	
+	
 }
 
 
