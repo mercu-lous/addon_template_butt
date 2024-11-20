@@ -7,7 +7,7 @@ function merc_abillity_spectre:OnSpellStart()
 	local radius = self:GetSpecialValueFor( "damage_radius" )
 	local dmg = self:GetSpecialValueFor( "self_damage" )
 	local dur = self:GetSpecialValueFor("duration")
-	local initls = self:GetSpecialValueFor("ls_start")
+	local initls = self:GetSpecialValueFor("mana_bonus")
 
 	-- when we start the spell, look for units (heroes and creeps) nearby, and deal damage
 	local caster = self:GetCaster()
@@ -68,7 +68,7 @@ function merc_abillity_spectre_modifier:DeclareFunctions()
 end
 
 function merc_abillity_spectre_modifier:GetModifierManaBonus(event) -- MODIFIER_PROPERTY_MANA_BONUS
-	return 100
+	return self.damage
 end
 
 -- function merc_abillity_spectre_modifier:OnAttackLanded(event) -- MODIFIER_EVENT_ON_ATTACK_LANDED

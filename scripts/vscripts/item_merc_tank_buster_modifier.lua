@@ -11,6 +11,23 @@ function item_merc_tank_buster_modifier:IsPurgable()
 	return false
 end
 
+function item_merc_tank_buster_modifier:GetAttributes()
+    return MODIFIER_ATTRIBUTE_MULTIPLE -- Allows the modifier to be stacked multiple times
+end
+
+function item_merc_tank_buster_modifier:OnCreated( kv )
+	-- references
+    self.attackspeed = self:GetAbility():GetSpecialValueFor("bonus_attackspeed")
+    self.pure_damage= self:GetAbility():GetSpecialValueFor("bonus_pure_damage")
+end
+
+function item_merc_tank_buster_modifier:OnRefresh( kv )
+	-- references
+
+    self.damage = self:GetAbility():GetSpecialValueFor("bonus_damage")
+    self.pure_damage= self:GetAbility():GetSpecialValueFor("bonus_pure_damage")
+end
+
 --------------------------------------------------------------------------------
 -- Modifier Effects
 function item_merc_tank_buster_modifier:DeclareFunctions()
@@ -22,9 +39,9 @@ function item_merc_tank_buster_modifier:DeclareFunctions()
 end
 
 function item_merc_tank_buster_modifier:GetModifierProcAttack_BonusDamage_Pure( params )
-	return 40
+	return self.pure_damage
 end
 
 function item_merc_tank_buster_modifier:GetModifierAttackSpeedBonus_Constant()
-	return 40
+	return self.attackspeed
 end

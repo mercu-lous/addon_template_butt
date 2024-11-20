@@ -28,20 +28,23 @@ function merc_impetus:OnOrbImpact( params )
 	-- unit identifier
 	local caster = self:GetCaster()
 	local target = params.target
-
 	-- load data
-	local distance_cap = self:GetSpecialValueFor("distance_cap")
+	local distance_min = self:GetSpecialValueFor("distance_min")
 	local distance_dmg = self:GetSpecialValueFor("bonus_damage")
 	
 	-- calculate distance & damage
-	local distance = math.min( (caster:GetOrigin()-target:GetOrigin()):Length2D(), distance_cap )
-	local damage = distance_dmg - (distance / 5)
+	local distance = (caster:GetOrigin()-target:GetOrigin()):Length2D()
+	local distance_damage = distance_dmg + 25 - (distance / 4)
+	if (distance < distance_min) then 
+		distance_damage = distance_dmg
+	end
+
 
 	-- apply damage
 	local damageTable = {
 		victim = target,
 		attacker = caster,
-		damage = damage,
+		damage = distance_damage,
 		damage_type = DAMAGE_TYPE_PURE,
 		ability = self, --Optional.
 	}

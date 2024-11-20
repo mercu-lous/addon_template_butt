@@ -2,6 +2,10 @@ item_merc_high_roller_modifier = class({})
 
 --------------------------------------------------------------------------------
 -- Classifications
+function item_merc_high_roller_modifier:GetAttributes()
+    return MODIFIER_ATTRIBUTE_MULTIPLE -- Allows the modifier to be stacked multiple times
+end
+
 function item_merc_high_roller_modifier:IsHidden()
 	-- actual true
 	return false
@@ -15,14 +19,16 @@ end
 -- Initializations
 function item_merc_high_roller_modifier:OnCreated( kv )
 	-- references
-	self.crit_chance = 3
-	self.crit_bonus = 3000
+    self.damage = self:GetAbility():GetSpecialValueFor("damage")
+    self.crit_chance = self:GetAbility():GetSpecialValueFor("crit_chance")
+    self.crit_bonus= self:GetAbility():GetSpecialValueFor("crit_bonus_percent")
 end
 
 function item_merc_high_roller_modifier:OnRefresh( kv )
 	-- references
-	self.crit_chance = 3
-	self.crit_bonus = 3000
+    self.damage = self:GetAbility():GetSpecialValueFor("damage")
+    self.crit_chance = self:GetAbility():GetSpecialValueFor("crit_chance")
+    self.crit_bonus = self:GetAbility():GetSpecialValueFor("crit_bonus_percent")
 end
 
 function item_merc_high_roller_modifier:OnDestroy( kv )
@@ -51,7 +57,7 @@ function item_merc_high_roller_modifier:GetModifierPreAttack_CriticalStrike( par
 end
 
 function item_merc_high_roller_modifier:GetModifierPreAttack_BonusDamage()
-	return 77
+	return self.damage
 end
 
 function item_merc_high_roller_modifier:GetModifierProcAttack_Feedback( params )

@@ -18,13 +18,27 @@ ListenToGameEvent("entity_killed", function(keys)
 	end
 
 end, nil)
+local count = 0
 
 ListenToGameEvent("npc_spawned", function(keys)
 	-- for k,v in pairs(keys) do print("npc_spawned",k,v) end
 	local spawnedUnit = keys.entindex and EntIndexToHScript(keys.entindex)
 
-	if spawnedUnit ~= nil then
-		--- put your stuff here 
+
+	if spawnedUnit:GetName() == "npc_dota_roshan" then
+		if count >= 0 then
+		spawnedUnit:AddItemByName("item_merc_unstoppable")
+		end
+		if count >= 1 then
+		spawnedUnit:AddItemByName("item_merc_basher_highroller")
+		end
+		if count >= 2 then
+		spawnedUnit:AddItemByName("item_merc_unobtainium_branch")
+		end
+		if count >= 3 then
+		spawnedUnit:AddItemByName("item_merc_fun_2")
+		end
+		count = count + 1
 	end
 
 end, nil)

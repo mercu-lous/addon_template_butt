@@ -2,6 +2,10 @@ item_merc_Divine_Daedalus_modifier = class({})
 
 --------------------------------------------------------------------------------
 -- Classifications
+function item_merc_Divine_Daedalus_modifier:GetAttributes()
+    return MODIFIER_ATTRIBUTE_MULTIPLE -- Allows the modifier to be stacked multiple times
+end
+
 function item_merc_Divine_Daedalus_modifier:IsHidden()
 	-- actual true
 	return false
@@ -15,14 +19,16 @@ end
 -- Initializations
 function item_merc_Divine_Daedalus_modifier:OnCreated( kv )
 	-- references
-	self.crit_chance = 30
-	self.crit_bonus = 300
+    self.damage = self:GetAbility():GetSpecialValueFor("damage")
+    self.crit_chance = self:GetAbility():GetSpecialValueFor("crit_chance")
+    self.crit_bonus_percent = self:GetAbility():GetSpecialValueFor("crit_bonus_percent")
 end
 
 function item_merc_Divine_Daedalus_modifier:OnRefresh( kv )
 	-- references
-	self.crit_chance = 30
-	self.crit_bonus = 300
+    self.damage = self:GetAbility():GetSpecialValueFor("damage")
+    self.crit_chance = self:GetAbility():GetSpecialValueFor("crit_chance")
+    self.crit_bonus_percent = self:GetAbility():GetSpecialValueFor("crit_bonus_percent")
 end
 
 function item_merc_Divine_Daedalus_modifier:OnDestroy( kv )
@@ -39,19 +45,19 @@ function item_merc_Divine_Daedalus_modifier:DeclareFunctions()
 	}
 
 	return funcs
-end
+end	
 
 function item_merc_Divine_Daedalus_modifier:GetModifierPreAttack_CriticalStrike( params )
 	if IsServer() then
 		if self:RollChance( self.crit_chance ) then 
 			self.record = params.record
-			return self.crit_bonus
+			return self.crit_bonus_percent
 		end
 	end
 end
 
 function item_merc_Divine_Daedalus_modifier:GetModifierPreAttack_BonusDamage()
-	return 777
+	return self.damage
 end
 
 function item_merc_Divine_Daedalus_modifier:GetModifierProcAttack_Feedback( params )

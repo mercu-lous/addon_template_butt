@@ -254,22 +254,22 @@
 			"required_level"
 			{
 				"value"				"3"
-				"special_bonus_facet_meepo_more_meepo"		"=2"
+				"special_bonus_facet_meepo_more_meepo"		"=1"
 			}
 			"levels_between_upgrades"
 			{
 				"value"				"3"
-				"special_bonus_facet_meepo_more_meepo"		"=2"
+				"special_bonus_facet_meepo_more_meepo"		"=1"
 			}
 			"max_level"
 			{
-				"value"					"7"
-				"special_bonus_facet_meepo_more_meepo"		"=8"
+				"value"					"10"
+				"special_bonus_facet_meepo_more_meepo"		"=80"
 			}
 			"main_meepo_stats_pct"
 			{
 				"value"				"75"
-				"special_bonus_facet_meepo_more_meepo"		"=70"
+				"special_bonus_facet_meepo_more_meepo"		"=65"
 			}
 			"tooltip_clones"	
 			{
@@ -278,7 +278,7 @@
 			}
 			"tooltip_clones_multiplicity"
 			{
-				"value"				"1 2 3 4 5 6 7 8 9 10"
+				"value"				"1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"
 				"RequiresFacet"	"meepo_more_meepo"
 			}
 			
@@ -957,18 +957,18 @@
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"3"
 		"Innate" 						"0"
-		"AbilityTextureName"			"item_soul_ring"
+		"AbilityTextureName"			"soul_ring_spec"
 		
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
-		"AbilityCooldown" "5"
+		"AbilityCooldown" "8"
 
 		"AbilityValues" {
-			"damage_radius" "400"
-			"self_damage" "100"
-			"duration" "10"
-			"ls_start" "200"
+			"damage_radius" "100"
+			"self_damage" "100 80 60"
+			"duration" "8"
+			"mana_bonus" "100 150 200"
 		}
 	}
 
@@ -1289,7 +1289,7 @@
 	{
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"abilities/merc_bash"
-		"AbilityTextureName"			"spirit_breaker_greater_bash"
+		"AbilityTextureName"			"merc_bash"
 		"FightRecapLevel"				"1"
 		"MaxLevel"						"4"
 		
@@ -2516,14 +2516,33 @@
 			"str_to_status_resist_pct"			"40"
 		}
 	}
+"primal_beast_onslaught"
+	{
+		"AbilityCooldown"				"25 19 13 8"
+		"AbilityValues"
+		{
+			"chargeup_time"				"0.5"
+			"max_charge_time"			"0.3"
+		}
+	}
+	"primal_beast_onslaught_release"	
+	{
+		"AbilityCooldown"				"0.2"
+	}
+
 	"primal_beast_trample"
 	{
 
 		"AbilityValues"
 		{
+			"base_damage"
+			{
+				"value"							"10 20 45 60"			
+				"CalculateSpellDamageTooltip"	"1"
+			}
 			"AbilityCooldown"				
 			{
-				"value"				"2"
+				"value"				"5"
 				"special_bonus_unique_primal_beast_trample_cooldown"	"-5"
 			}
 		}
@@ -2629,9 +2648,10 @@
 	}
 "sniper_assassinate"
 	{
-		"AbilityCastRange"				"300"
-		"AbilityCastRangeBuffer"		"600"
-		"AbilityDamage"					"600 850 1000"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.5"
+		"AbilityDamage"					"600 1000 1500"
 		"AbilityValues"
 		{
 			"cooldown_reduction_on_kill"		"20 15 10"
@@ -2901,10 +2921,10 @@
 			}
 			"count"					
 			{
-				"value"				"2 3 4 5"
+				"value"				"1 2 3 4"
 				"special_bonus_unique_broodmother_6" "+1"
 			}
-			"bonus_movespeed"		"30 42 54 66"
+			"bonus_movespeed"		"60 100 150 210"
 			"AbilityChargeRestoreTime"	
 			{
 				"value"				"40"
@@ -3148,7 +3168,7 @@
 					"value"			"50 100 150 200 250 300 350 400 450 500 550 600 650 700 750"
 					"affected_by_aoe_increase"	"1"
 				}
-				"attack_interval"				"0.375 0.35 0.325 0.3 0.275 0.25 0.225 0.2 0.175 0.15 0.125 0.1 0.075 0.05 0.025"
+				"attack_interval"				"0.2"
 		}
 	}
 
@@ -3159,7 +3179,7 @@
 		"DependentOnAbility"			"ember_spirit_fire_remnant"
 		"Innate" "0"
 
-		"AbilityManaCost"				"35 42 50 58 65 72 80 88 95 102 110 118 125 132 140"
+		"AbilityManaCost"				"35"
 
 		"AbilityValues"
 		{
@@ -3172,14 +3192,21 @@
 		}
 	}
 
+	"skeleton_king_reincarnation"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	}
+
 	"ember_spirit_fire_remnant"
 	{
 		"MaxLevel" "15"
 		"RequiredLevel" "0"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 
-		"AbilityCooldown"				"0.5"
-		"AbilityCharges"				"3"
+		"AbilityCooldown"				"0.2"
+		"AbilityCharges"				"1 1 2 2 3 3 4 4 5 5 6 6 7 7 8"
 
 		"AbilityManaCost"				"0"
 
@@ -3188,7 +3215,7 @@
 				"speed_multiplier"				"100 125 150 175 200 225 250 275 300 325 350 375 400 425 450"
 				"AbilityChargeRestoreTime"		
 				{
-					"value"			"55 52 50 47 45 42 40 37 35 32 30 27 25 22 20"
+					"value"			"45 42 40 37 35 32 30 27 25 22 20 17 15 12 10"
 					"special_bonus_unique_ember_spirit_5"	"-4"
 				}
 				"damage"
@@ -3920,7 +3947,7 @@
 		"AbilityValues"
 		{
 			"bonus_damage"	"100 180 240 300"
-			"distance_cap"			"1750"
+			"distance_min"			"100"
 			"bonus_attack_range_scepter"	"190 190 190"
 		}
 	}
@@ -4040,7 +4067,7 @@
 		{
 			"bonus_max_mana_per_int"			
 			{
-				"value"						"20"
+				"value"						"22"
 			}
 		}
 	}
@@ -4199,7 +4226,117 @@
 		}
 	}
 
-	
+		"nevermore_shadowraze1"
+	{
+		"AbilityValues"
+		{
+			"duration"	
+			{
+				"value"				"70000"
+			}
+			"movement_speed_debuff"
+			{
+				"value"											"0 0 0 0"
+				"special_bonus_facet_nevermore_shadowmire"		"=0 =0 =0 =0"
+			}
+			"attack_speed_debuff"
+			{
+				"value"											"0 0 0 0"
+				"special_bonus_facet_nevermore_shadowmire"		"=0 =0 =0 =0"
+			}
+			"stack_bonus_damage" 
+				{
+					"value"				"10 15 20 25"
+					"CalculateSpellDamageTooltip"	"0"
+					"special_bonus_unique_nevermore_7"	"+30"
+				}
+		}
+	}
+
+	"nevermore_shadowraze2"
+	{
+		"AbilityValues"
+		{
+			"duration"	
+			{
+				"value"				"70000"
+			}
+			"movement_speed_debuff"
+			{
+				"value"											"0 0 0 0"
+				"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8"
+			}
+			"attack_speed_debuff"
+			{
+				"value"											"0 0 0 0"
+				"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8"
+			}
+			"stack_bonus_damage" 
+				{
+					"value"				"10 15 20 25"
+					"CalculateSpellDamageTooltip"	"0"
+					"special_bonus_unique_nevermore_7"	"+30"
+				}
+		}
+	}
+
+	"nevermore_shadowraze3"
+	{
+		"AbilityValues"
+		{
+			"duration"	
+			{
+				"value"				"70000"
+			}
+			"movement_speed_debuff"
+			{
+				"value"											"0 0 0 0"
+				"special_bonus_facet_nevermore_shadowmire"		"=-5 =-6 =-7 =-8"
+			}
+			"attack_speed_debuff"
+			{
+				"value"											"0 0 0 0"
+				"special_bonus_facet_nevermore_shadowmire"		"=-5 =-6 =-7 =-8"
+			}
+			"stack_bonus_damage" 
+				{
+					"value"				"10 15 20 25"
+					"CalculateSpellDamageTooltip"	"0"
+					"special_bonus_unique_nevermore_7"	"+30"
+				}
+		}
+	}
+
+	"nevermore_necromastery"
+	{
+		"AbilityValues"
+		{
+				"necromastery_damage_per_soul"	
+				{
+					"value"					"1"
+					"CalculateSpellDamageTooltip"	"0"
+					"special_bonus_unique_nevermore_1"			"+2"
+				}
+				"necromastery_max_souls"		
+				{
+					"value"						"20 40 80 160"
+					"special_bonus_scepter"		"+50"
+				}
+			
+		}
+	}
+
+	"skeleton_king_mortal_strike"
+	{
+		
+		"AbilityCooldown"				"5.0 4.5 4 3.5"
+
+		"AbilityValues"
+		{
+			"crit_mult"					"200 400 600 800"
+		}
+
+	}
 	
 }
 

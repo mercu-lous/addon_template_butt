@@ -19,12 +19,16 @@ function modifier_merc_damage_return:OnCreated( kv )
 	self.ability = self:GetAbility()
 	self.pseudoseed = RandomInt( 1, 100 )
 	self.numProcs = 0 --// max 3
+	self.max_instances = self:GetAbility():GetSpecialValueFor( "instances" )
+	self.reflection_percent = self:GetAbility():GetSpecialValueFor( "reflection_percent" )
 
 	if not IsServer() then return end
 end
 
 function modifier_merc_damage_return:OnRefresh( kv )
 	self:OnCreated( kv )
+	self.max_instances = self:GetAbility():GetSpecialValueFor( "instances" )
+	self.reflection_percent = self:GetAbility():GetSpecialValueFor( "reflection_percent" )
 end
 
 function modifier_merc_damage_return:OnRemoved()
@@ -58,13 +62,13 @@ function modifier_merc_damage_return:OnTakeDamage(params)
 	if params.attacker:IsDebuffImmune() then return end
 
 	if params.unit == self:GetParent() then
-	if self.numProcs < 2 then
+	if self.numProcs < self.max_instances then
 		self.numProcs = self.numProcs + 1
 	
 	local damageTable = {
 		victim = params.attacker,
 		attacker = self.parent,
-		damage =(params.original_damage * 2),
+		damage =(params.original_damage * (self.reflection_percent / 300)),
 		damage_type = DAMAGE_TYPE_PHYSICAL,
 		ability = self.ability, --Optional.
 	}
@@ -72,7 +76,7 @@ function modifier_merc_damage_return:OnTakeDamage(params)
 	damageTable = {
 		victim = params.attacker,
 		attacker = self.parent,
-		damage = (params.original_damage * 2),
+		damage = (params.original_damage * (self.reflection_percent / 300)),
 		damage_type = DAMAGE_TYPE_MAGICAL,
 		ability = self.ability, --Optional.
 	}
@@ -80,7 +84,7 @@ function modifier_merc_damage_return:OnTakeDamage(params)
 	damageTable = {
 		victim = params.attacker,
 		attacker = self.parent,
-		damage = (params.original_damage * 3),
+		damage = (params.original_damage * (self.reflection_percent / 300)),
 		damage_type = DAMAGE_TYPE_PURE,
 		ability = self.ability, --Optional.
 	}

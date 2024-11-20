@@ -160,13 +160,16 @@
 		"AttributeStrengthGain"		"3.5"
 	}
 	"npc_dota_hero_primal_beast" {
-		"MovementSpeed"		"400"
+		"MovementSpeed"		"375"
 	}
 	"npc_dota_hero_sniper" {
 		"AttackRange"		"150"
-		"AttributeStrengthGain"		"5.0000"
-		"AttributeIntelligenceGain"		"5.600000"
-		"AttributeAgilityGain"		"5.20000"
+		"AttributeBaseStrength"		"30"
+		"AttributeStrengthGain"		"7.0000"
+		"AttributeIntelligenceGain"		"7.600000"
+		"AttributeBaseIntelligence"		"30"
+		"AttributeAgilityGain"		"10.00000"
+		"AttributeBaseAgility" "30"
 		"MovementSpeed"		"340"
 	}
 	"npc_dota_hero_morphling" {
