@@ -29,5 +29,44 @@
 		}
 	}
 
+	"npc_dota_goodguys_tower4"
+	{
+		"ArmorPhysical"				"35"		// Physical protection.
+
+		"BaseAttackSpeed"			"220"
+		"AttackRate"				"0.9"		// Speed of attack.
+
+		"StatusHealth"				"5000"		// Base health.
+		"StatusHealthRegen"			"10"			// Health regeneration rate.
+
+		"VisionDaytimeRange"		"2000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"2000"		// Range of vision at night time.
+
+		"AttackRangeActivityModifiers"
+		{
+			"attack_normal_range"	"0"
+			"attack_long_range"		"700"
+		}
+	}
+
+	"npc_dota_badguys_tower4"
+	{
+		"ArmorPhysical"				"35"		// Physical protection.
+
+		"BaseAttackSpeed"			"220"
+		"AttackRate"				"0.9"		// Speed of attack.
+
+		"StatusHealth"				"5000"		// Base health.
+		"StatusHealthRegen"			"10"			// Health regeneration rate.
+
+		"VisionDaytimeRange"		"2000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"2000"		// Range of vision at night time.
+
+		"AttackRangeActivityModifiers"
+		{
+			"attack_normal_range"	"0"
+			"attack_long_range"		"700"
+		}
+	}
 	
 }

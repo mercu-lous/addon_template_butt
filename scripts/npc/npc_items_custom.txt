@@ -1010,7 +1010,51 @@
 			"01"						"item_cloak;item_chainmail"
 		}
 	}
-	
+
+	"item_recipe_merc_divine_scepter" {
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"3000"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_divine_scepter"
+		"ItemRequirements"
+		{
+			"01"						"item_ethereal_blade;item_rapier"
+		}
+	}
+
+"item_merc_divine_scepter" {
+ 	"BaseClass"                     "item_lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityTextureName" 			"item_divine_scepter"
+    "ScriptFile"                    "item_merc_divine_scepter"
+    "ItemCost"                      "12200"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemStockMax"					"1"
+	"ItemStockTime"					"1200.0"
+	"ItemKillable"					"0"
+	"ItemContributesToNetWorthWhenDropped"	"0"
+	"AllowedInBackpack"				"0"
+	"IsTempestDoubleClonable"		"0"
+	"ItemAliases"					"Fun, Merc, Item, stats, divine, damage"
+
+	"AbilityCooldown" "8"
+	"AbilityManaCost" "75"
+
+		"AbilityValues" 
+			{
+			"damage" "80"
+			"blast_movement_slow"	"-80"
+			"duration"				"4.0"
+			"ethereal_damage_bonus"	"-40"
+		}
+	}
+
+
+
 	
 
 }
