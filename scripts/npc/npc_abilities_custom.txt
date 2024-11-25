@@ -268,7 +268,7 @@
 			}
 			"main_meepo_stats_pct"
 			{
-				"value"				"75"
+				"value"				"85"
 				"special_bonus_facet_meepo_more_meepo"		"=65"
 			}
 			"tooltip_clones"	
@@ -411,7 +411,7 @@
 		{	
 			"AbilityCooldown"
 			{
-				"value"		"4.0"
+				"value"		"6.0 5.5 5 4.5"
 				"special_bonus_unique_lich_3" "-3.5"
 			}
 		}
@@ -440,7 +440,7 @@
 
 	"lich_frost_shield"
 	{
-		"AbilityCooldown"				"20 15 10 5"
+		"AbilityCooldown"				"25 20 15 10"
 		"AbilityManaCost"				"70"
 	}
 
@@ -525,16 +525,15 @@
 			}	
 		}	
 	}
-	//=================================================================================================================
-	// Chaos Knight: Chaos Bolt
-	//=================================================================================================================
+
+
 	"chaos_knight_chaos_bolt"
 	{
 		"AbilityCastPoint"				"0.0"
 
 		"AbilityValues"
 		{
-			"chaos_bolt_speed"		"500"
+			"chaos_bolt_speed"		"400"
 			"stun_min"
 			{
 				"value"					"0"
@@ -542,8 +541,8 @@
 			}
 			"stun_max"
 			{
-				"value"					"3.0 3.75 4.5 5.25"
-				"special_bonus_unique_chaos_knight_3"	"+1.2"
+				"value"					"3.0 3.75 4.5 5.0"
+				"special_bonus_unique_chaos_knight_3"	"+1.0"
 			}
 			"damage_min"				"0"
 			"damage_max"				"250 425 500 675"
@@ -572,11 +571,11 @@
 			{
 				"chance"				
 				{
-						"value"				"16.166666"
+						"value"				"15"
 						"special_bonus_unique_chaos_knight_5"		"+10"
 				}
 				"crit_min"				"100"
-				"crit_max"				"240 300 360 420"
+				"crit_max"				"220 280 340 400"
 			}
 	}
 
@@ -584,7 +583,7 @@
 	{
 		"AbilityValues"
 		{
-			"bonus_illusion_chance"				"12.5"
+			"bonus_illusion_chance"				"10"
 			"bonus_illusion_count"				"3"
 		}
 	}
@@ -645,10 +644,10 @@
 		{
 			"bonus_damage"			
 			{
-				"value"		"12 25 37 50"
+				"value"		"15 30 42 55"
 				"special_bonus_unique_slardar_2"	"+50"
 			}
-			"duration"				".32 .34 .36 .38"
+			"duration"				".35 .37 .39 .41"
 			"attack_count"			"0"
 		}
 	}
@@ -1152,14 +1151,14 @@
 
 	"earth_spirit_boulder_smash"
 	{
-		"AbilityCooldown"				"10.0 8.0 6.0 4.0"
+		"AbilityCooldown"				"10.0 8.0 6.0 3.5"
 	}
 	"earth_spirit_rolling_boulder"
 	{
 		"AbilityValues" {
 			"AbilityCooldown"				
 				{
-					"value"				"6.4 4.8 3.2 1.6"
+					"value"				"6.4 4.8 3.2 1.5"
 				}
 			}
 	}
@@ -1227,11 +1226,7 @@
 			}
 		}
 	}
-	"ogre_bruiser_ogre_smash"
-	{
-		"AbilityCastPoint"				"1"
-		"AbilityCooldown"				"6.0"
-	}
+	
 	"clinkz_wind_walk"
 	{
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
@@ -1400,7 +1395,7 @@
 				"value"				"2 3 4 5"
 				"special_bonus_unique_drow_ranger_8"		"+2"
 			}
-			"arrow_count_per_wave"				"10"
+			"arrow_count_per_wave"				"9"
 			"multishot_movespeed"						
 			{
 				"value"										"0"
@@ -1647,7 +1642,7 @@
 			"hp_perc_damage"		
 				{
 					"value"			"2.75 4.5 6.25 8"
-				"special_bonus_unique_phoenix_5" "+3.5"
+				"special_bonus_unique_phoenix_5" "+5.5"
 				}	
 		}
 	}
@@ -1701,7 +1696,7 @@
 					"value"	"30 20 10"
 					"special_bonus_unique_gyrocopter_5"				"-6"
 				}
-				"slow_duration"				"2"
+				"slow_duration"				"1"
 				"damage"					
 				{
 					"value"					"100 150 200"
@@ -1712,7 +1707,7 @@
 					"value"			"550"
 					"affected_by_aoe_increase"	"1"
 				}
-				"total_strikes"							"15"		
+				"total_strikes"							"10"		
 				"strike_separation"			"550"
 				"tracking_strike_radius"				
 				{
@@ -2233,7 +2228,7 @@
 		{
 				"bounce_radius"				
 				{
-					"value"		"1000"
+					"value"		"800"
 					"RequiresScepter"		"1"
 					"affected_by_aoe_increase"	"1"
 				}
@@ -2246,7 +2241,7 @@
 				"initial_target_count"
 				{
 					"value"						"2"
-					"special_bonus_facet_witch_doctor_cleft_death"	"+3"
+					"special_bonus_facet_witch_doctor_cleft_death"	"+2"
 				}
 				"secondary_attack_damage_pct"
 				{
@@ -2385,7 +2380,7 @@
 				"shield_per_damage_pct"
 				{
 					"value"						"250"
-					"special_bonus_facet_legion_commander_stonehall_plate"	"+0"					
+					"special_bonus_facet_legion_commander_stonehall_plate"	"+50"					
 				}
 				"shield_duration"
 				{
@@ -2397,16 +2392,20 @@
 	"legion_commander_moment_of_courage"
 	{
 
-		"AbilityCooldown"				"2.1 1.6 1.1 .6 0.1"
-	}
+		"AbilityCooldown"				"1.6 1.1 0.6 0.1"
 	"legion_commander_duel"
 	{
 		"AbilityValues" 
 		{
+			"assist_reward_damage"
+			{
+				"value"			"5"
+				"special_bonus_facet_legion_commander_spoils_of_war"	"10 20 30"				
+			}
 			"reward_damage"			
 			{
-				"value"			"-10 -20 -30"
-				"special_bonus_shard"	"-10"
+				"value"			"15 25 35"
+				"special_bonus_shard"	"10"
 			}
 		"AbilityCooldown"	
 			{
@@ -2521,7 +2520,7 @@
 		"AbilityCooldown"				"25 19 13 8"
 		"AbilityValues"
 		{
-			"chargeup_time"				"0.5"
+			"chargeup_time"				"1"
 			"max_charge_time"			"0.3"
 		}
 	}
@@ -2633,7 +2632,7 @@
 			}
 			"bonus_armor"		
 			{
-				"value"												"15 20 25 30"
+				"value"												"15 25 35 45"
 				"special_bonus_unique_sniper_take_aim_armor"		"+15"
 			}
 		}
@@ -2648,7 +2647,6 @@
 	}
 "sniper_assassinate"
 	{
-		"AbilityCastPoint"				"0.0"
 		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.5"
 		"AbilityDamage"					"600 1000 1500"
@@ -2735,16 +2733,6 @@
 		{
 			"morph_cooldown"		"0.001"
 			"morph_rate_tooltip"	"1000"
-		}
-	}
-
-	"morphling_accumulation"
-	{
-		"AbilityValues"
-		{
-			"percent_to_increment"			"50.0"
-			"bonus_all_stats_per_level_of_attributes"	"-2"		// if changing this, also change bonus_all_stats_pct_tooltip
-			"bonus_all_stats_pct_tooltip"	"0"
 		}
 	}
 
@@ -4035,6 +4023,7 @@
 			}
 		}
 	}
+
 "centaur_work_horse"
 	{
 		"AbilityValues"
@@ -4067,7 +4056,7 @@
 		{
 			"bonus_max_mana_per_int"			
 			{
-				"value"						"22"
+				"value"						"12"
 			}
 		}
 	}
@@ -4158,7 +4147,7 @@
 		"AbilityValues"
 		{	
 			"item_slots"				"1"
-			"bonus_stat_percent"		"100 200 300 400"
+			"bonus_stat_percent"		"80 140 190 300"
 		}
 	}
 
@@ -4333,10 +4322,11 @@
 
 		"AbilityValues"
 		{
-			"crit_mult"					"200 400 600 800"
+			"crit_mult"					"150 250 450 650"
 		}
 
 	}
+	// TODO ADD SLARK WITH LOTS POUNCES
 	
 }
 

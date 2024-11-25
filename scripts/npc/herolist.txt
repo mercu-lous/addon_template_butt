@@ -85,4 +85,5 @@
     "npc_dota_hero_skeleton_king" "-1"
    // "npc_dota_hero_ogre_magi" "-1"
     "npc_dota_hero_nevermore" "-1"
+    "npc_dota_hero_arc_warden" "-1"
     }
