@@ -36,7 +36,7 @@
 	
 		"item_tome_of_knowledge"
 	{
-		"ItemCost"						"500"
+		"ItemCost"						"600"
 		"ItemPurchasable"				"1"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -48,7 +48,7 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"20"			  
+		"ItemStockTime"					"30"			  
 		"ItemInitialStockTime"			"180"  
 		"IsObsolete"					"0"
 
@@ -625,7 +625,7 @@
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName" 			"item_unobtainium_branch"
     "ScriptFile"                    "item_merc_unobtainium_branch"
-    "ItemCost"                      "4800"
+    "ItemCost"                      "99999999"
 	"ItemAliases"					"Fun, Merc, branch, Item, stats,"
 	"AbilityValues"
     	{
@@ -657,7 +657,7 @@
 		"ItemResult"					"item_merc_gold_branch"
 		"ItemRequirements"
 		{
-			"01"						"item_branches;item_branches;item_branches;item_branches;item_branches;item_branches"
+			"01"						"item_branches;item_branches;item_branches;item_branches;item_branches;item_branches;item_branches"
 		}
 	}
 	"item_merc_platinum_branch"
@@ -1126,6 +1126,49 @@
 		}
 	}
 
+
+"item_merc_respawn_reducer" {
+ 	"BaseClass"                     "item_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_respawn_reducer"
+    "ScriptFile"                    "abilities/item_merc_respawn_reducer"
+    "ItemCost"                      "10"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemAliases"					"Fun, Merc, Item, stats, damage"
+
+			"AbilityValues"
+			{
+				"respawn_reduction" "-99"
+			}
+	"Modifiers"
+	{
+		"modifier_custom_item_health_bonus"
+		{
+			"Passive" "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_RESPAWNTIME" "-99"
+				}
+
+			}
+		}
+	}
+
+"item_merc_protecting_plate" {
+ 	"BaseClass"                     "item_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName" 			"item_protecting_plate"
+    "ScriptFile"                    "abilities/item_merc_protecting_plate"
+    "ItemCost"                      "10"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemAliases"					"Fun, Merc, Item, stats, damage"
+	"AbilityCooldown" 
+
+		"AbilityValues"
+		{
+				"duration" "5"
+		}
+	}
 	
 
 }
