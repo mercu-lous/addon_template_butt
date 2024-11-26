@@ -14,7 +14,7 @@ function modifier_item_merc_blasting_wand_thinker:OnCreated( kv )
 		local delay = self:GetAbility():GetSpecialValueFor("delay")
 		self.damage = self:GetAbility():GetSpecialValueFor("damage")
 		self.radius = self:GetAbility():GetSpecialValueFor("radius")
-		local vision = 200
+		local vision = 300
 
 		-- Start interval
 		self:StartIntervalThink( delay )
@@ -37,6 +37,8 @@ end
 -- Interval Effects
 function modifier_item_merc_blasting_wand_thinker:OnIntervalThink()
 	-- find enemies
+	print("Find enemies")
+
 	local enemies = FindUnitsInRadius(
 		self:GetCaster():GetTeamNumber(),	-- int, your team number
 		self:GetParent():GetOrigin(),	-- point, center point
@@ -48,6 +50,7 @@ function modifier_item_merc_blasting_wand_thinker:OnIntervalThink()
 		0,	-- int, order filter
 		false	-- bool, can grow cache
 	)
+	print("After found", enemies)
 
 	local damageTable = {
 		-- victim = target,
@@ -57,6 +60,7 @@ function modifier_item_merc_blasting_wand_thinker:OnIntervalThink()
 		ability = self:GetAbility(), --Optional.
 	}
 	for _,enemy in pairs(enemies) do
+		print("Does thing here")
 		-- damage
 		damageTable.victim = enemy
 		ApplyDamage(damageTable)
@@ -72,6 +76,7 @@ function modifier_item_merc_blasting_wand_thinker:OnIntervalThink()
 		-- effects
 		self:PlayEffects3( enemy )
 	end
+	print("Does end here")
 
 	self:PlayEffects2()
 	self:Destroy()

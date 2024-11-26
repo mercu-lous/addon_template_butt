@@ -1028,7 +1028,11 @@
 
 "item_merc_divine_scepter" {
  	"BaseClass"                     "item_lua"
+
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
 	"AbilityTextureName" 			"item_divine_scepter"
     "ScriptFile"                    "abilities/item_merc_divine_scepter"
     "ItemCost"                      "12975"
@@ -1084,7 +1088,7 @@
 		"AbilityValues" 
 		{
 			"radius" "450"
-			"damage" "250"
+			"damage" "150"
 			"delay" "0.5"
 		}
 	}
@@ -1101,7 +1105,7 @@
 		"ItemResult"					"item_merc_nuking_wand"
 		"ItemRequirements"
 		{
-			"01"						"item_blasting_wand;item_meteor_hammer"
+			"01"						"item_merc_blasting_wand;item_meteor_hammer"
 		}
 	}
 
@@ -1113,7 +1117,7 @@
     "ItemCost"                      "6666"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	"ItemAliases"					"Fun, Merc, Item, stats, damage"
-
+	
 	"AbilityCastRange"				"700"
 	"AbilityCooldown"				"20"
 	"AbilityManaCost"				"75"
@@ -1121,8 +1125,8 @@
 		"AbilityValues" 
 		{
 			"radius" "850"
-			"damage" "1050"
-			"delay" "5.5"
+			"damage" "600"
+			"delay" "2"
 		}
 	}
 
@@ -1131,7 +1135,6 @@
  	"BaseClass"                     "item_lua"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName" 			"item_respawn_reducer"
-    "ScriptFile"                    "abilities/item_merc_respawn_reducer"
     "ItemCost"                      "10"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	"ItemAliases"					"Fun, Merc, Item, stats, damage"
@@ -1142,12 +1145,12 @@
 			}
 	"Modifiers"
 	{
-		"modifier_custom_item_health_bonus"
+		"modifier_custom_respawn_reducer"
 		{
 			"Passive" "1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_RESPAWNTIME" "-99"
+					"MODIFIER_PROPERTY_RESPAWNTIME" "-90"
 				}
 
 			}
@@ -1162,7 +1165,7 @@
     "ItemCost"                      "10"
 	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 	"ItemAliases"					"Fun, Merc, Item, stats, damage"
-	"AbilityCooldown" 
+	"AbilityCooldown" 				"25"
 
 		"AbilityValues"
 		{
