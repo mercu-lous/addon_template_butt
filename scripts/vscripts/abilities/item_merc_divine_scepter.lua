@@ -19,7 +19,7 @@ function item_merc_divine_scepter:OnSpellAppliedSuccessfully(event)
 	if target:TriggerSpellAbsorb( self ) then return end
 
 	-- load data
-	local duration = self:GetSpecialValueFor("duration")
+	local duration1 = self:GetSpecialValueFor("duration")
 
 
 	-- add modifier
@@ -27,7 +27,14 @@ function item_merc_divine_scepter:OnSpellAppliedSuccessfully(event)
 		caster, -- player source
 		self, -- ability source
 		"modifier_item_merc_e_blade", -- modifier name
-		{ duration = duration } -- kv
+		{ duration = duration1 } -- kv
+	)
+
+	target:AddNewModifier(
+		caster, -- player source
+		self, -- ability source
+		"modifier_item_merc_e_blade", -- modifier name
+		{ duration = duration1 } -- kv
 	)
 	
 end
