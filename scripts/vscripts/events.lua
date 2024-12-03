@@ -18,7 +18,7 @@ ListenToGameEvent("entity_killed", function(keys)
 	end
 
 end, nil)
-local count = 0
+local roshan_count = 0
 
 ListenToGameEvent("npc_spawned", function(keys)
 	-- for k,v in pairs(keys) do print("npc_spawned",k,v) end
@@ -26,19 +26,19 @@ ListenToGameEvent("npc_spawned", function(keys)
 
 
 	if spawnedUnit:GetName() == "npc_dota_roshan" then
-		if count >= 0 then
+		if roshan_count >= 0 then
 		spawnedUnit:AddItemByName("item_merc_unstoppable")
 		end
-		if count >= 1 then
+		if roshan_count == 1 then
 		spawnedUnit:AddItemByName("item_merc_basher_highroller")
 		end
-		if count >= 2 then
+		if roshan_count >= 2 then
 		spawnedUnit:AddItemByName("item_merc_unobtainium_branch")
 		end
-		if count >= 3 then
+		if roshan_count >= 3 then
 		spawnedUnit:AddItemByName("item_merc_fun_2")
 		end
-		count = count + 1
+		roshan_count = roshan_count + 1
 	end
 
 end, nil)
@@ -86,6 +86,77 @@ ListenToGameEvent("dota_tower_kill", function(keys)
 	local gold = keys.gold
 	local towerTeam = keys.teamnumber
 	local killer_userid = keys.killer_userid
+
+end, nil)
+
+local greedisgood = true
+local thereisnospoon = true
+local whosyourdaddy = true
+local thicc = true
+local neverdied = true
+local gamble = true
+local bigiron = true
+local denydidwhat = true
+
+ListenToGameEvent("player_chat", function(keys)
+	-- for k,v in pairs(keys) do print("dota_tower_kill",k,v) end
+	local teamonly  = keys.teamonly 
+	local playerid = keys.playerid
+	local userid = keys.userid
+	print("PID and UID  ")
+	print("playerID ", playerid)
+	print("userID ", userid)
+	local text = keys.text
+	print("Text: ", text)
+	local player = PlayerResource:GetPlayer(playerid)
+	local hero = player:GetAssignedHero()
+	
+	if (text == "greedisgood" and greedisgood) then 
+		hero:ModifyGold(300, false, 8)
+		greedisgood = false
+	end
+	if (text == "thicc" and thicc) then 
+		hero:ModifyStrength(8)
+		thicc = false
+	end
+	if (text == "neverdied" and neverdied) then 
+		hero:IncrementDeaths(-1)
+		hero:IncrementDeaths(-1)
+		hero:IncrementDeaths(-1)
+		greedisgood = false
+	end
+	if (text == "gamble" and gamble) then 
+		local rand = math.random()
+		if rand<0.5 then
+			hero:ModifyGold(800, false, 8)
+		end
+		hero:ModifyGold(-400, false, 8)
+		gamble = false
+	end
+	if (text == "bigiron" and bigiron) then 
+		hero:AddItemByName("item_blades_of_attack")
+		bigiron = false
+	end
+	if (text == "denydidwhat" and denydidwhat) then 
+		local denies = hero:GetDenies()
+		hero:ModifyGold(denies * 10, false, 8)
+
+		denydidwhat = false
+	end
+	if (text == "thereisnospoon" and thereisnospoon) then 
+		hero:HeroLevelUp(true)
+
+		thereisnospoon = false
+	end
+	if (text == "whosyourdaddy" and whosyourdaddy) then 
+		local kills = hero:GetKills()
+		hero:Addexperience(300 * kills, 8, false, true)
+
+		whosyourdaddy = false
+	end
+	
+
+
 
 end, nil)
 
