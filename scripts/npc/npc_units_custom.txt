@@ -68,5 +68,9 @@
 			"attack_long_range"		"700"
 		}
 	}
+
+	"npc_dota_courier" {
+		"Ability5"		"merc_work_horse"
+	}
 	
 }

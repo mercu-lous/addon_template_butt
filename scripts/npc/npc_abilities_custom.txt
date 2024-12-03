@@ -971,6 +971,28 @@
 		}
 	}
 
+"merc_work_horse" {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities\merc_work_horse"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		"Innate" 						"0"
+		"AbilityTextureName"			"centaur_work_horse"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		"AbilityCooldown" "15"
+
+		"AbilityValues" {
+			"duration" "5"
+		}
+	}
+
+	
+
 	"spectre_desolate"
 	{
 		"MaxLevel"						"3"
@@ -1386,6 +1408,18 @@
 			}
 		}
 }
+
+"merc_pure_attack_damage" {
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities\merc_pure_attack_damage"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"Innate" 						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues" {
+		}
+	}
 
 	"drow_ranger_multishot" {
 		"AbilityChannelTime"			"2.45"
