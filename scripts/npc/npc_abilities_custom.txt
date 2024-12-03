@@ -983,11 +983,11 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-
-		"AbilityCooldown" "15"
+		"AbilityCastRange"				"600"
+		"AbilityCooldown"				"20"
 
 		"AbilityValues" {
-			"duration" "5"
+			"duration" "7"
 		}
 	}
 
