@@ -64,6 +64,7 @@ end
 function modifier_item_merc_e_blade:CheckState()
 	local state = {
 		[MODIFIER_STATE_DISARMED] = true,
+		[MODIFIER_STATE_ATTACK_IMMUNE] = true,
 	}
 
 	return state

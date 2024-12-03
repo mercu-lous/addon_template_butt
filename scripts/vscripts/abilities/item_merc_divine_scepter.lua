@@ -7,7 +7,25 @@ function item_merc_divine_scepter:GetIntrinsicModifierName()
 end
 
 function item_merc_divine_scepter:OnSpellStart()
-	print("SPELL START")	
+	-- unit identifier
+	local caster = self:GetCaster()
+	local target = self:GetCursorTarget()
+
+	-- cancel if linken
+	if target:TriggerSpellAbsorb( self ) then return end
+
+	-- load data
+	local duration = self:GetSpecialValueFor("duration")
+
+
+	-- add modifier
+	self.modifier = target:AddNewModifier(
+		caster, -- player source
+		self, -- ability source
+		"modifier_item_merc_e_blade", -- modifier name
+		{ duration = duration } -- kv
+	)
+
 end
 
 function item_merc_divine_scepter:OnSpellAppliedSuccessfully(event)
@@ -24,13 +42,6 @@ function item_merc_divine_scepter:OnSpellAppliedSuccessfully(event)
 
 	-- add modifier
 	self.modifier = target:AddNewModifier(
-		caster, -- player source
-		self, -- ability source
-		"modifier_item_merc_e_blade", -- modifier name
-		{ duration = duration1 } -- kv
-	)
-
-	target:AddNewModifier(
 		caster, -- player source
 		self, -- ability source
 		"modifier_item_merc_e_blade", -- modifier name

@@ -34,13 +34,13 @@ end
 -- Modifier Effects
 function modifier_item_merc_respawn_reducer:DeclareFunctions()
 	local funcs = {
-		MODIFIER_PROPERTY_RESPAWNTIME_PERCENTAGE,
+		MODIFIER_PROPERTY_RESPAWNTIME,
 	}
 
 	return funcs
 end
 
-function modifier_item_merc_respawn_reducer:GetModifierPercentageRespawnTime(params)
-	return self.respawn_reduction
+function modifier_item_merc_respawn_reducer:GetModifierConstantRespawnTime()
+	return -90
  end
 

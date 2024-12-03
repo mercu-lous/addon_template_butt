@@ -1029,10 +1029,6 @@
 "item_merc_divine_scepter" {
  	"BaseClass"                     "item_lua"
 
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-
 	"AbilityTextureName" 			"item_divine_scepter"
     "ScriptFile"                    "abilities/item_merc_divine_scepter"
     "ItemCost"                      "12975"
@@ -1045,9 +1041,18 @@
 	"IsTempestDoubleClonable"		"0"
 	"ItemAliases"					"Fun, Merc, Item, stats, divine, damage"
 
-	"AbilityCastRange"				"800"
-	"AbilityCooldown" "8"
-	"AbilityManaCost" "75"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+	"AbilityCastRange"				"725"
+	"AbilityCastPoint"				"0.3"
+
+	"AbilityCooldown"				"25"
+	"AbilityManaCost"				"100"
 
 		"AbilityValues" 
 			{
