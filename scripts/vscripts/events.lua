@@ -97,6 +97,7 @@ local neverdied = true
 local gamble = true
 local bigiron = true
 local denydidwhat = true
+local pizza = true
 
 ListenToGameEvent("player_chat", function(keys)
 	-- for k,v in pairs(keys) do print("dota_tower_kill",k,v) end
@@ -154,9 +155,13 @@ ListenToGameEvent("player_chat", function(keys)
 
 		whosyourdaddy = false
 	end
-	
+	if (text == "pizza" and pizza) then 
+		hero:Addexperience(111, 8, false, true)
+		hero:ModifyGold(111, false, 8)
+		hero:AddItemByName("item_blood_grenade")
 
-
+		pizza = false
+	end
 
 end, nil)
 

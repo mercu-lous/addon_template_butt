@@ -947,35 +947,35 @@
 
 	"item_blood_grenade"
 	{
-		"AbilityCastRange"				"800"
+		"AbilityCastRange"				"850"
 		"AbilityCastPoint"				"0.5"
 		"AbilityHealthCost"				"75"
 		"AbilityCooldown"				"0.1"
 
 		"AbilityTextureName" 			"item_nutella_grenade"
-		"ItemCost"						"50"
+		"ItemCost"						"25"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemAliases"					"grenade"
 		"ItemStackable"					"1"
 		"ItemStackableMax"				"100"
-		"ItemStockMax"					"3"
+		"ItemStockMax"					"10"
 		"ItemStockInitial"				"10"
-		"ItemStockTime"					"1"
+		"ItemStockTime"					"0.1"
 
 		"AbilityValues"
 		{
 
-			"speed"					"1050"
+			"speed"					"1350"
 			"radius"				
 			{	
 				"value"		"150"
 				"affected_by_aoe_increase"	"1"
 			}
-			"movespeed_slow"		"-15"
-			"bonus_health"			"50"
-			"damage_over_time"		"15"
-			"impact_damage"			"50"
+			"movespeed_slow"		"-10"
+			"bonus_health"			"35"
+			"damage_over_time"		"10"
+			"impact_damage"			"40"
 			"tick_rate"				"1"
 			"debuff_duration"		"5"
 		}
