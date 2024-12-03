@@ -29,7 +29,7 @@
 	}
 		"npc_dota_hero_chaos_knight" 
 	{
-		"AttackDamageMin"		"-125"
+		"AttackDamageMin"		"-150"
 		"AttackDamageMax"		"300"
 
 	}
@@ -266,5 +266,13 @@
 		}
 	}
 	
+		"npc_dota_hero_arc_warden"
+	{
+		"AttackDamageMin"		"40"
+		"AttackDamageMax"		"41"
+		"AttackDamageType"		"DAMAGE_TYPE_PURE"
+		"AttackRange"		"675"
+		"StatusHealthRegen"		"20.25"
+	}
 	
 }

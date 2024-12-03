@@ -36,7 +36,7 @@
 	
 		"item_tome_of_knowledge"
 	{
-		"ItemCost"						"500"
+		"ItemCost"						"600"
 		"ItemPurchasable"				"1"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
@@ -48,7 +48,7 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"20"			  
+		"ItemStockTime"					"30"			  
 		"ItemInitialStockTime"			"180"  
 		"IsObsolete"					"0"
 
@@ -214,14 +214,14 @@
 
 
 			"AbilityValues"{ //Change these when change below
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "90"
-				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "90"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "90"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "300"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "300"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "300"
 				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE" "50"
-				"MODIFIER_PROPERTY_RESPAWNTIME" "-80"
+				"MODIFIER_PROPERTY_RESPAWNTIME" "99999"
 				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "50"
 				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "50"
-				"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "50"
+				"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "33"
 				"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE" "-20"
 			}
 	"Modifiers"
@@ -231,14 +231,14 @@
 			"Passive" "1"
 			"Properties"
 			{
-				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "90"
-				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "90"
-				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "90"
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "300"
+				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "300"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "300"
 				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE" "50"
-				"MODIFIER_PROPERTY_RESPAWNTIME" "-80"
+				"MODIFIER_PROPERTY_RESPAWNTIME" "99999"
 				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "50"
 				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "50"
-				"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "50"
+				"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "33"
 				"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE" "-20"
 			}
 
@@ -625,7 +625,7 @@
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName" 			"item_unobtainium_branch"
     "ScriptFile"                    "item_merc_unobtainium_branch"
-    "ItemCost"                      "4800"
+    "ItemCost"                      "99999999"
 	"ItemAliases"					"Fun, Merc, branch, Item, stats,"
 	"AbilityValues"
     	{
@@ -657,7 +657,7 @@
 		"ItemResult"					"item_merc_gold_branch"
 		"ItemRequirements"
 		{
-			"01"						"item_branches;item_branches;item_branches;item_branches;item_branches;item_branches"
+			"01"						"item_branches;item_branches;item_branches;item_branches;item_branches;item_branches;item_branches"
 		}
 	}
 	"item_merc_platinum_branch"
@@ -1010,7 +1010,158 @@
 			"01"						"item_cloak;item_chainmail"
 		}
 	}
+
+	"item_recipe_merc_divine_scepter" {
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"2000"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_divine_scepter"
+		"ItemRequirements"
+		{
+			"01"						"item_ethereal_blade;item_rapier"
+		}
+	}
+
+"item_merc_divine_scepter" {
+ 	"BaseClass"                     "item_lua"
+
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+
+	"AbilityTextureName" 			"item_divine_scepter"
+    "ScriptFile"                    "abilities/item_merc_divine_scepter"
+    "ItemCost"                      "12975"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemStockMax"					"1"
+	"ItemStockTime"					"1200.0"
+	"ItemKillable"					"0"
+	"ItemContributesToNetWorthWhenDropped"	"0"
+	"AllowedInBackpack"				"0"
+	"IsTempestDoubleClonable"		"0"
+	"ItemAliases"					"Fun, Merc, Item, stats, divine, damage"
+
+	"AbilityCastRange"				"800"
+	"AbilityCooldown" "8"
+	"AbilityManaCost" "75"
+
+		"AbilityValues" 
+			{
+			"damage" "80"
+			"blast_movement_slow"	"-80"
+			"duration"				"4.0"
+			"ethereal_damage_bonus"	"-40"
+		}
+	}
+
+"item_recipe_merc_blasting_wand" {
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"450"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_blasting_wand"
+		"ItemRequirements"
+		{
+			"01"						"item_dagon"
+		}
+	}
+
+"item_merc_blasting_wand" {
+ 	"BaseClass"                     "item_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityTextureName" 			"item_blasting_wand"
+    "ScriptFile"                    "abilities/item_merc_blasting_wand"
+    "ItemCost"                      "3300"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemAliases"					"Fun, Merc, Item, stats, damage"
+
+	"AbilityCastRange"				"700"
+	"AbilityCooldown"				"30"
+	"AbilityManaCost"				"75"
+
+		"AbilityValues" 
+		{
+			"radius" "450"
+			"damage" "150"
+			"delay" "0.75"
+		}
+	}
+
+
+"item_recipe_merc_nuking_wand" {
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		"ItemCost"						"416"	
+		"ItemShopTags"					""
+
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_nuking_wand"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_blasting_wand;item_meteor_hammer"
+		}
+	}
+
+"item_merc_nuking_wand" {
+ 	"BaseClass"                     "item_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+	"AbilityTextureName" 			"item_nuking_wand"
+    "ScriptFile"                    "abilities/item_merc_nuking_wand"
+    "ItemCost"                      "6666"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemAliases"					"Fun, Merc, Item, stats, damage"
 	
+	"AbilityCastRange"				"1100"
+	"AbilityCooldown"				"45"
+	"AbilityManaCost"				"100"
+
+		"AbilityValues" 
+		{
+			"radius" "750"
+			"damage" "600"
+			"delay" "2"
+		}
+	}
+
+
+"item_merc_respawn_reducer" {
+ 	"BaseClass"                     "item_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_respawn_reducer"
+	"ScriptFile" 					"abilities/item_merc_respawn_reducer"
+    "ItemCost"                      "10"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemAliases"					"Fun, Merc, Item, stats, damage"
+
+			"AbilityValues"
+			{
+				"respawn_reduction" "-90"
+			}
+	}
+
+"item_merc_protecting_plate" {
+ 	"BaseClass"                     "item_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName" 			"item_protecting_plate"
+    "ScriptFile"                    "abilities/item_merc_protecting_plate"
+    "ItemCost"                      "10"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemAliases"					"Fun, Merc, Item, stats, damage"
+	"AbilityCooldown" 				"25"
+
+		"AbilityValues"
+		{
+				"duration" "5"
+		}
+	}
 	
 
 }
