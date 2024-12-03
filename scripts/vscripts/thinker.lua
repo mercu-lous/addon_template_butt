@@ -18,11 +18,13 @@ end
 
 function Thinker:DontForgetToSubscribe()
 	-- print("20 minutes")
+
 	return nil -- does not repeat
 end
 
 function Thinker:LateGame()
-	-- print("30 minutes")
+	CreateUnitByName("dota_unit_roshan", Vector(100, 100, 100), true, nil, nil, DOTA_TEAM_NEUTRALS)
+	
 	return nil -- does not repeat
 end
 
