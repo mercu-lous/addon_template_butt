@@ -18,6 +18,7 @@ end
 
 function Thinker:DontForgetToSubscribe()
 	-- print("20 minutes")
+	CreateUnitByName("dota_unit_roshan", Vector(700, 700, 0), true, nil, nil, DOTA_TEAM_NEUTRALS)
 
 	return nil -- does not repeat
 end

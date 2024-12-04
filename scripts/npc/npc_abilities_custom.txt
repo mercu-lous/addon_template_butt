@@ -1329,6 +1329,28 @@
 		}
 	}
 
+	"merc_ogre_magi_multicast"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/merc_ogre_magi_multicast"
+		"AbilityTextureName"			"ogre_magi_multicast"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"IsBreakable" 					"0"
+		
+		"AbilityValues"
+		{
+			"multicast_chance" "0.5 0.61 0.72"
+
+			"multicast_chance_tooltip"			"50 61 72"		
+		}
+	}
+
 	"merc_magic_resistance_lua" {
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"merc_magic_resistance"

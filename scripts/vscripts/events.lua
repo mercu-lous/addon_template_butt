@@ -65,9 +65,9 @@ ListenToGameEvent("dota_player_used_ability", function(keys)
 	-- for k,v in pairs(keys) do print("dota_player_used_ability",k,v) end
 	local casterUnit = keys.caster_entindex and EntIndexToHScript(keys.caster_entindex)
 	local abilityname = keys.abilityname
+	local ability = casterUnit:FindAbilityByName(abilityname)
 	local playerID = keys.PlayerID
 	local player = keys.PlayerID and PlayerResource:GetPlayer(keys.PlayerID)
-	-- local ability = casterUnit and casterUnit.FindAbilityByName and casterUnit:FindAbilityByName(abilityname) -- bugs if hero has 2 times the same ability
 
 end, nil)
 
