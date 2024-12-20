@@ -72,7 +72,7 @@
 		"MovementTurnRate"		"1000000.000000"
 		"ModelScale"		"0.500000"
 		"AttributeBaseStrength"		"12"
-		"AttributeStrengthGain"		"2.300000"
+		"AttributeStrengthGain"		"2.000000"
 	}
 	"npc_dota_hero_clinkz" {
 		"Ability2" "clinkz_skeleton_walk"
@@ -273,6 +273,11 @@
 		"Ability7"		"merc_pure_attack_damage"
 		"AttackRange"		"688"
 	}
+
+	    "npc_dota_hero_ogre_magi" 
+		{
+			"Ability7" "merc_ogre_magi_multicast"
+		}
 
 	
 	

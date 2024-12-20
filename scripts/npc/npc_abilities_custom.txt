@@ -983,11 +983,11 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
-
-		"AbilityCooldown" "15"
+		"AbilityCastRange"				"600"
+		"AbilityCooldown"				"20"
 
 		"AbilityValues" {
-			"duration" "5"
+			"duration" "7"
 		}
 	}
 
@@ -1326,6 +1326,28 @@
 			"bash_chance"			"17 17 17 17"		
 			"bash_damage"				"14 20 26 32"
 			"bash_duration"				"0.5 0.8 1.1 1.4"
+		}
+	}
+
+	"merc_ogre_magi_multicast"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/merc_ogre_magi_multicast"
+		"AbilityTextureName"			"ogre_magi_multicast"
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"3"
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"IsBreakable" 					"0"
+		
+		"AbilityValues"
+		{
+			"multicast_chance" "0.5 0.61 0.72"
+
+			"multicast_chance_tooltip"			"50 61 72"		
 		}
 	}
 
