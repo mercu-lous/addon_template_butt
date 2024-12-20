@@ -1,7 +1,7 @@
 local Thinker = class({})
 
 ListenToGameEvent("game_rules_state_game_in_progress", function()
-		Timers:CreateTimer( 0, Thinker.Minute00 )
+		Timers:CreateTimer( 15, Thinker.Minute00 )
 		Timers:CreateTimer( 20*60, Thinker.DontForgetToSubscribe )
 		Timers:CreateTimer( 30*60, Thinker.LateGame )
 		Timers:CreateTimer( Thinker.VeryVeryOften )
@@ -12,20 +12,27 @@ ListenToGameEvent("game_rules_state_game_in_progress", function()
 end, GameMode)
 
 function Thinker:Minute00()
+	
 	print("The Game begins!")
+	print("The Game begins!")
+	-- local unit = Entities:FindByName(null, "greg_boss")
+	-- local place3 = unit:GetAbsOrigin()
+	-- CreateUnitByName("npc_dota_roshan", place3 , false, nil, nil, DOTA_TEAM_NEUTRALS)
 	return nil -- does not repeat
 end
 
 function Thinker:DontForgetToSubscribe()
 	-- print("20 minutes")
-	CreateUnitByName("dota_unit_roshan", Vector(700, 700, 0), true, nil, nil, DOTA_TEAM_NEUTRALS)
-
+	local unit = Entities:FindByName(null, "greg_boss")
+	local place3 = unit:GetAbsOrigin()
+	CreateUnitByName("npc_dota_roshan", place3 , false, nil, nil, DOTA_TEAM_NEUTRALS)
 	return nil -- does not repeat
 end
 
 function Thinker:LateGame()
-	CreateUnitByName("dota_unit_roshan", Vector(100, 100, 100), true, nil, nil, DOTA_TEAM_NEUTRALS)
-	
+	local unit = Entities:FindByName(null, "greg_boss")
+	local place3 = unit:GetAbsOrigin()
+	CreateUnitByName("npc_dota_roshan", place3 , false, nil, nil, DOTA_TEAM_NEUTRALS)
 	return nil -- does not repeat
 end
 
