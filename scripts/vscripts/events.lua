@@ -98,6 +98,8 @@ local gamble = true
 local bigiron = true
 local denydidwhat = true
 local pizza = true
+local iamstrong = true
+local iamstrong2 = true
 
 ListenToGameEvent("player_chat", function(keys)
 	-- for k,v in pairs(keys) do print("dota_tower_kill",k,v) end
@@ -119,6 +121,15 @@ ListenToGameEvent("player_chat", function(keys)
 	if (text == "thicc" and thicc) then 
 		hero:ModifyStrength(8)
 		thicc = false
+	end
+	if (text == "iamstrong" and thicc) then 
+		
+		hero:ModifyStrength(30)
+		iamstrong = false
+	end
+	if (text == "iamstrong2" and thicc) then 
+		hero:ModifyStrength(30)
+		iamstrong2 = false
 	end
 	if (text == "neverdied" and neverdied) then 
 		hero:IncrementDeaths(-1)

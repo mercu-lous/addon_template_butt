@@ -217,8 +217,8 @@
 				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "300"
 				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "300"
 				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "300"
-				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE" "50"
-				"MODIFIER_PROPERTY_RESPAWNTIME" "99999"
+				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE" "33"
+				"MODIFIER_PROPERTY_RESPAWNTIME" "9999"
 				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "50"
 				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "50"
 				"MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING" "33"
@@ -1167,6 +1167,39 @@
 				"duration" "5"
 		}
 	}
+
+
+"item_recipe_merc_mind_of_the_leviathan" {
+	"BaseClass"						"item_datadriven"
+	"Model"							"models/props_gameplay/recipe.vmdl"
+
+	"ItemCost"						"1000"	
+	"ItemShopTags"					""
+
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_merc_mind_of_the_leviathan"
+	"ItemRequirements"
+	{
+			"01"						"item_energy_booster;item_null_talisman;item_null_talisman"
+	}
+}
+
+"item_merc_mind_of_the_leviathan" {
+ 	"BaseClass"                     "item_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName" 			"item_mind_of_the_leviathan"
+    "ScriptFile"                    "abilities/item_merc_mind_of_the_leviathan"
+	"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+	"ItemAliases"					"Fun, Merc, Item, stats, damage"
+
+
+		"AbilityValues" {
+			"starting_mana" "200"
+			"stacking_mana" "50"
+		}
+
+	}
+
 	
 
 }
