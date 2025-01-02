@@ -26,16 +26,16 @@ ListenToGameEvent("npc_spawned", function(keys)
 
 
 	if spawnedUnit:GetName() == "npc_dota_roshan" then
-		if roshan_count >= 0 then
+		if roshan_count == 0 then
 		spawnedUnit:AddItemByName("item_merc_unstoppable")
 		end
 		if roshan_count == 1 then
-		spawnedUnit:AddItemByName("item_merc_basher_highroller")
+		spawnedUnit:AddItemByName("item_merc_mind_of_the_leviathan")
 		end
-		if roshan_count >= 2 then
+		if roshan_count == 3 then
 		spawnedUnit:AddItemByName("item_merc_unobtainium_branch")
 		end
-		if roshan_count >= 3 then
+		if roshan_count == 5 then
 		spawnedUnit:AddItemByName("item_merc_fun_2")
 		end
 		roshan_count = roshan_count + 1

@@ -33,6 +33,7 @@ function Thinker:LateGame()
 	local unit = Entities:FindByName(null, "greg_boss")
 	local place3 = unit:GetAbsOrigin()
 	CreateUnitByName("npc_dota_roshan", place3 , false, nil, nil, DOTA_TEAM_NEUTRALS)
+	CreateUnitByName("npc_dota_roshan", place3 , false, nil, nil, DOTA_TEAM_NEUTRALS)
 	return nil -- does not repeat
 end
 

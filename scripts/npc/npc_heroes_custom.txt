@@ -163,14 +163,7 @@
 		"MovementSpeed"		"375"
 	}
 	"npc_dota_hero_sniper" {
-		"AttackRange"		"150"
-		"AttributeBaseStrength"		"30"
-		"AttributeStrengthGain"		"7.0000"
-		"AttributeIntelligenceGain"		"7.600000"
-		"AttributeBaseIntelligence"		"30"
-		"AttributeAgilityGain"		"10.00000"
-		"AttributeBaseAgility" "30"
-		"MovementSpeed"		"340"
+		
 	}
 	"npc_dota_hero_morphling" {
 		"AttributeStrengthGain"		"5.5"

@@ -2680,34 +2680,18 @@
 		"AbilityCooldown"				"10 8 6 4"
 	}
 
-"sniper_take_aim"
-	{
-		"AbilityValues"
-		{
-			"slow"						
-			{
-				"value"								"0"				
-			}
-			"bonus_armor"		
-			{
-				"value"												"15 25 35 45"
-				"special_bonus_unique_sniper_take_aim_armor"		"+15"
-			}
-		}
-	}
+
 	
 	"sniper_keen_scope"
 	{
 		"AbilityValues"
 		{
-			"bonus_range"				"50 100 150 200"
+			"bonus_range"				"350 700 1400 2800"
 		}
 	}
 "sniper_assassinate"
 	{
-		"AbilityCastRange"				"800"
-		"AbilityCastPoint"				"0.5"
-		"AbilityDamage"					"600 1000 1500"
+		"AbilityCastRange"				"4500 6500 8500"
 		"AbilityValues"
 		{
 			"cooldown_reduction_on_kill"		"20 15 10"

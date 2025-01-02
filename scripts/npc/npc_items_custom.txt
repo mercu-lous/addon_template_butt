@@ -234,7 +234,6 @@
 				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "300"
 				"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "300"
 				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "300"
-				"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE" "50"
 				"MODIFIER_PROPERTY_RESPAWNTIME" "99999"
 				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "50"
 				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS" "50"
@@ -625,8 +624,8 @@
     "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName" 			"item_unobtainium_branch"
     "ScriptFile"                    "item_merc_unobtainium_branch"
-    "ItemCost"                      "99999999"
 	"ItemAliases"					"Fun, Merc, branch, Item, stats,"
+	"ItemPurchasable"				"0"
 	"AbilityValues"
     	{
         "all_stats" "120"
@@ -1094,7 +1093,7 @@
 		"AbilityValues" 
 		{
 			"radius" "450"
-			"damage" "150"
+			"damage" "250"
 			"delay" "0.75"
 		}
 	}
@@ -1131,7 +1130,7 @@
 		"AbilityValues" 
 		{
 			"radius" "750"
-			"damage" "600"
+			"damage" "800"
 			"delay" "2"
 		}
 	}
@@ -1200,6 +1199,71 @@
 
 	}
 
+	"item_recipe_merc_octarine_core_2"
+	{
+		"BaseClass"						"item_datadriven"
+
+		"ItemCost"						"2500"	
+		"ItemShopTags"					""
 	
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_octarine_core_2"
+		"ItemRequirements"
+		{
+			"01"						"item_octarine_core"
+		}
+	}
+	
+	"item_merc_octarine_core_2"
+	{
+ 		"BaseClass"                     "item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 			"item_octarine_core_2"
+    	"ScriptFile"                    "abilities/item_merc_octarine_core_2"
+		"ItemAliases"					"mana;mb;octarine core;Merc;merc;fun;byron"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"cooldown_reduction"		"50"
+			"health_bonus"			"500"
+			"mana_bonus"			"500"
+			"mana_regen"		"6"
+		}
+	}
+
+	"item_recipe_merc_octarine_core_3"
+	{
+		"BaseClass"						"item_datadriven"
+
+		"ItemCost"						"2500"	
+		"ItemShopTags"					""
+	
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_merc_octarine_core_3"
+		"ItemRequirements"
+		{
+			"01"						"item_merc_octarine_core_2"
+		}
+	}
+	
+	"item_merc_octarine_core_3"
+	{
+ 		"BaseClass"                     "item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 			"item_octarine_core_3"
+    	"ScriptFile"                    "abilities/item_merc_octarine_core_3"
+		"ItemAliases"					"mana;mb;octarine core;Merc;merc;fun;byron"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		
+		"AbilityValues"
+		{
+			"cooldown_reduction"		"75"
+			"health_bonus"			"500"
+			"mana_bonus"			"500"
+			"mana_regen"		"6"
+		}
+	}
+
 
 }
