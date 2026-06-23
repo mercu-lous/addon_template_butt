@@ -35,6 +35,16 @@ softRequire("thinker")
 function Precache( context )
 	FireGameEvent("addon_game_mode_precache",nil)
 	PrecacheResource("soundfile", "soundevents/custom_sounds.vsndevts", context)
+
+	for playerID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do 
+		if PlayerResource:IsValidPlayerID(playerID) then
+			PrecacheUnitByNameSync("npc_dota_courier", context, playerID)
+			PrecacheUnitByNameSync("npc_dota_courier_upgraded", context, playerID)
+			PrecacheUnitByNameSync("npc_dota_flying_courier", context, playerID)
+			PrecacheUnitByNameSync("npc_dota_flying_courier_upgraded", context, playerID)
+		end
+	end
+	PrecacheUnitByNameSync("npc_dota_hero_lich", context)
 	--[[
 		Precache things we know we'll use.  Possible file types include (but not limited to):
 			PrecacheResource( "model", "*.vmdl", context )

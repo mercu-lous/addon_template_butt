@@ -207,19 +207,6 @@
 		"AttributeIntelligenceGain" "10.0"
 	}
 	"npc_dota_hero_tiny" {
-		"Facets"
-		{
-			"tiny_insurmountable" 
-			{
-				"Abilities"
-				{
-					"Ability1"
-					{
-						"AbilityName"	"tiny_insurmountable"
-					}
-				}
-			}
-		}
 	}
 
 	"npc_dota_hero_spectre" {
@@ -228,44 +215,7 @@
 
 	"npc_dota_hero_skeleton_king" {
 			"ability1" "merc_bash"
-	"Facets"
-		{		
-			"skeleton_king_facet_bone_guard" 
-			{
-				"Icon"				"summons"
-				"Color"				"Yellow"
-				"GradientID"		"0"
-
-				"Abilities"
-				{
-					"Ability1"
-					{
-						"AbilityName"	"skeleton_king_spectral_blade"
-						"AbilityIndex"	"1"
-						"AutoLevelAbility"	"false"
-					}
-				}
-			}
-
-			"skeleton_king_facet_cursed_blade"
-			{
-				"Icon"				"damage"
-				"Color"				"Red"
-				"GradientID"		"0"
-
-				"Abilities"
-				{
-					"Ability1"
-					{
-						"AbilityName"	"skeleton_king_spectral_blade"
-						"AbilityIndex"	"1"
-						"AutoLevelAbility"	"false"
-					}
-				}
-			}
-		}
 	}
-	
 		"npc_dota_hero_arc_warden"
 	{
 		"AttackDamageMin"		"30"

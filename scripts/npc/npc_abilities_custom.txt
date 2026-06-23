@@ -2352,19 +2352,6 @@
 				"arrow_max_stunrange"	"4000"
 		}
 	}
-	"phantom_assassin_immaterial"
-	{
-
-		"AbilityValues"
-		{
-			"evasion_base"			
-			{
-				"value"		"50"
-				"special_bonus_unique_phantom_assassin_3"	"+15"
-			}
-			"evasion_per_level"		"3"
-		}
-	}
 	"phantom_assassin_phantom_strike"
 	{
 		"AbilityCastPoint"				"0.00"
@@ -3364,26 +3351,26 @@
 			}
 			"cleave_distance"
 			{
-				"value"			"600 900 1400 1700"
+				"value"			"900 1400 1700 2000"
 				"affected_by_aoe_increase"	"1"
 			}
 			"great_cleave_damage"
 			{
-				"value"				"100"
+				"value"				"120"
 				"special_bonus_unique_sven_8" "+30"
 			}
 		}
 	}
 		"sven_gods_strength"
 	{
-		"AbilityCooldown"				"300"
+		"AbilityCooldown"				"240"
 		"AbilityDuration"				"35.0"
 		"AbilityManaCost"				"0"
 		"AbilityValues"
 		{
 			"gods_strength_damage"
 			{
-				"value"		"300 450 600"	
+				"value"		"500 700 900"	
 				"special_bonus_unique_sven_2"		"+150"	
 			}
 			"bonus_slow_resistance"
@@ -3399,7 +3386,7 @@
 		{
 			"value"
 			{
-				"value" "45"
+				"value" "60"
 				"ad_linked_abilities" "sven_gods_strength"
 			}
 		}
