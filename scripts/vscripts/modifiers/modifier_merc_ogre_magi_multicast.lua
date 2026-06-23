@@ -32,7 +32,7 @@ function modifier_merc_ogre_magi_multicast:OnCreated( kv )
 
     self.chance = self:GetAbility():GetSpecialValueFor( "multicast_chance" ) * 100
 
-	self.buffer_range = 300
+	self.buffer_range = 400
 end
 
 function modifier_merc_ogre_magi_multicast:OnRefresh( kv )

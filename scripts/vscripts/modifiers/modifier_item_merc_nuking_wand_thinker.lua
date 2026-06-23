@@ -43,7 +43,7 @@ function modifier_item_merc_nuking_wand_thinker:OnIntervalThink()
 		nil,	-- handle, cacheUnit. (not known)
 		self.radius,	-- float, radius. or use FIND_UNITS_EVERYWHERE
 		DOTA_UNIT_TARGET_TEAM_ENEMY,	-- int, team filter
-		DOTA_UNIT_TARGET_ALL,	-- int, type filter
+		DOTA_UNIT_TARGET_HERO,	-- int, type filter
 		0,	-- int, flag filter
 		0,	-- int, order filter
 		false	-- bool, can grow cache

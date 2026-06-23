@@ -26,16 +26,16 @@ ListenToGameEvent("npc_spawned", function(keys)
 
 
 	if spawnedUnit:GetName() == "npc_dota_roshan" then
-		if roshan_count >= 0 then
+		if roshan_count == 0 then
 		spawnedUnit:AddItemByName("item_merc_unstoppable")
 		end
 		if roshan_count == 1 then
-		spawnedUnit:AddItemByName("item_merc_basher_highroller")
+		spawnedUnit:AddItemByName("item_merc_mind_of_the_leviathan")
 		end
-		if roshan_count >= 2 then
+		if roshan_count == 3 then
 		spawnedUnit:AddItemByName("item_merc_unobtainium_branch")
 		end
-		if roshan_count >= 3 then
+		if roshan_count == 5 then
 		spawnedUnit:AddItemByName("item_merc_fun_2")
 		end
 		roshan_count = roshan_count + 1
@@ -98,6 +98,8 @@ local gamble = true
 local bigiron = true
 local denydidwhat = true
 local pizza = true
+local iamstrong = true
+local iamstrong2 = true
 
 ListenToGameEvent("player_chat", function(keys)
 	-- for k,v in pairs(keys) do print("dota_tower_kill",k,v) end
@@ -119,6 +121,15 @@ ListenToGameEvent("player_chat", function(keys)
 	if (text == "thicc" and thicc) then 
 		hero:ModifyStrength(8)
 		thicc = false
+	end
+	if (text == "iamstrong" and thicc) then 
+		
+		hero:ModifyStrength(30)
+		iamstrong = false
+	end
+	if (text == "iamstrong2" and thicc) then 
+		hero:ModifyStrength(30)
+		iamstrong2 = false
 	end
 	if (text == "neverdied" and neverdied) then 
 		hero:IncrementDeaths(-1)
